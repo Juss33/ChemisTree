@@ -2,7 +2,6 @@ import {mutation, query} from "./_generated/server"
 import {v} from "convex/values"
 import { getCurrentUserOrThrow, getCurrentUser } from "./users"
 import { counts} from "./counter"
-import { get } from "http"
 
 type VoteType = "upvote" | "downvote"
 

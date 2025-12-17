@@ -1,6 +1,6 @@
-import { internalMutation, query, QueryCtx } from "./_generated/server";
-import { UserJSON } from "@clerk/backend";
-import { v, Validator } from "convex/values";
+import { internalMutation, query, type QueryCtx } from "./_generated/server";
+import type { UserJSON } from "@clerk/backend";
+import { v, type Validator } from "convex/values";
 import { counts, postCountKey } from "./counter";
 
 export const current = query({
