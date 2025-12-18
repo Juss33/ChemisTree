@@ -1,6 +1,5 @@
 {
   "name": "chemistree",
-  "homepage": "https://chemistreefoundation.org",
   "private": true,
   "version": "0.0.0",
   "type": "module",
