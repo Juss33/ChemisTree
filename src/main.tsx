@@ -6,6 +6,8 @@ import { ClerkProvider, useAuth } from "@clerk/clerk-react";
 import { ConvexProviderWithClerk } from "convex/react-clerk";
 import { ConvexReactClient } from "convex/react";
 
+console.log("Convex URL:", import.meta.env.VITE_CONVEX_URL);
+
 const convex = new ConvexReactClient(import.meta.env.VITE_CONVEX_URL as string);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
