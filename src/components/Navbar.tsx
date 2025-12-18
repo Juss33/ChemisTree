@@ -16,7 +16,7 @@ const NavBar = () => {
     <div className="navbar-content">
       <Link to="/" className="logo-link">
         <div className="logo-container">
-          <img src={"/LOGOCHEMSITREE.png"} alt="logo" width="40" height="40"></img>
+          <img src="/LOGOCHEMSITREE.png" alt="logo" width="40" height="40"></img>
           <span className="site-name">ChemisTree</span>
         </div>
       </Link>
