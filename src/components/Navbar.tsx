@@ -3,6 +3,7 @@ import {SignInButton,UserButton,useUser} from "@clerk/clerk-react";
 import {Authenticated,Unauthenticated} from "convex/react"
 import {Link,useNavigate} from "react-router-dom";
 import CreateDropdown from "./CreateDropDown";
+import CreateDropdownAU from "./AboutUsDD";
 import {useState} from "react"
 import SearchBar from "./SearchBar";
 import "../styles/Navbar.css";
@@ -18,6 +19,7 @@ const NavBar = () => {
         <div className="logo-container">
           <img src="/LOGOCHEMSITREE.png" alt="logo" width="40" height="40"></img>
           <span className="site-name">ChemisTree</span>
+          {showDropdown && (<CreateDropdownAU isOpen={showDropdown} onClose={()=> setShowDropdown(false)} />)}
         </div>
       </Link>
       <SearchBar/>
