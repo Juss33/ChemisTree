@@ -12,22 +12,27 @@
 
 /* Main content area */
 .content-container {
-  margin-left: 240px;      /* SAME as sidebar width */
+  margin-left: 240px;
   padding: 24px;
   width: calc(100% - 240px);
-  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 
 /* Optional: keep content from stretching too wide */
 .content-grid {
   max-width: 1100px;
 }
+
 @media (max-width: 768px) {
   .sidebar {
-    width: 200px;
+    transform: translateX(-100%);
   }
+
   .content-container {
-    margin-left: 200px;
-    width: calc(100% - 200px);
+    margin-left: 0;
+    width: 100%;
   }
 }
