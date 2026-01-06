@@ -9,8 +9,8 @@ const HomePage = () => {
         <h2 className="sidebar-title">ChemisTREE</h2>
         <a href="/">Home</a>
         <a href="/feed">Feed</a>
-        <a href="/projects">Projects</a>
-        <a href="/journal">ChemPen Journal</a>
+        <a href="/projects">Stuff</a>
+        <a href="/journal">Kai's toes</a>
         <a href="/resources">Resources</a>
         <a href="/contact">Contact</a>
       </nav>
