@@ -6,7 +6,7 @@ import PostPage from "./pages/PostPage";
 import ProfilePage from "./pages/ProfilePage";
 import SubmitPage from "./pages/SubmitPage";
 import "./styles/App.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import './styles/App.scss';
 
 function App() {
   return <BrowserRouter>
@@ -17,7 +17,8 @@ function App() {
         <Route path="r/:subredditName/submit" element={<SubmitPage />} />
         <Route path="post/:postId" element={<PostPage />} />
         <Route path="u/:username" element={<ProfilePage />} />
-        <Route path="*" element={<Navigate to="/" replace />} />
+        {/* Prod: return 404 page */}
+        {/* <Route path="*" element={<Navigate to="/" replace />} /> */}
       </Route>
     </Routes>
   </BrowserRouter>

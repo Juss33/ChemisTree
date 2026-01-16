@@ -1,0 +1,31 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+// custom variables here
+
+$orange: #FF4500; 
+
+$new-colors: (
+    "orange": $orange
+);
+$theme-colors: map-merge($theme-colors, $new-colors);
+
+
+$btn-border-radius: 20px;
+    
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/root";
+// main bs styles
+@import "bootstrap/scss/bootstrap";
+
+// css overrides
+.btn-signin {
+    @include button-variant (
+        #ff4500, 
+        #ff4500, 
+        $color: #fff, 
+        $hover-background: #ff5722, 
+        $hover-color: #fff
+    )
+}

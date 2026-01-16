@@ -21,7 +21,7 @@ const NavBar = () => {
       <SearchBar/>
       <Unauthenticated>
         <SignInButton mode="modal">
-          <Button variant="warning">Sign In</Button>
+          <Button variant="signin">Sign In</Button>
         </SignInButton>
       </Unauthenticated>
       <Authenticated>
