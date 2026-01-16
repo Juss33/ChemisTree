@@ -6,6 +6,7 @@ import PostPage from "./pages/PostPage";
 import ProfilePage from "./pages/ProfilePage";
 import SubmitPage from "./pages/SubmitPage";
 import "./styles/App.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return <BrowserRouter>
