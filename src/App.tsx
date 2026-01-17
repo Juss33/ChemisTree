@@ -1,10 +1,11 @@
-import { BrowserRouter , Routes, Route, Navigate} from "react-router-dom";
+import { BrowserRouter , Routes, Route} from "react-router-dom";
 import Layout from "./components/Layout";
 import HomePage from "./pages/HomePage";
 import SubredditPage from "./pages/SubredditPage";
 import PostPage from "./pages/PostPage";
 import ProfilePage from "./pages/ProfilePage";
 import SubmitPage from "./pages/SubmitPage";
+import PageNotFound from "./pages/PageNotFound";
 import "./styles/App.css";
 import './styles/App.scss';
 
@@ -17,8 +18,8 @@ function App() {
         <Route path="r/:subredditName/submit" element={<SubmitPage />} />
         <Route path="post/:postId" element={<PostPage />} />
         <Route path="u/:username" element={<ProfilePage />} />
-        {/* Prod: return 404 page */}
-        {/* <Route path="*" element={<Navigate to="/" replace />} /> */}
+        {/* 404 page */}
+        <Route path="*" element={<PageNotFound />} />
       </Route>
     </Routes>
   </BrowserRouter>
