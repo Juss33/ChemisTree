@@ -6,13 +6,16 @@
 $orange: #FF4500; 
 
 $new-colors: (
-    "orange": $orange
+    "orange": $orange,
+    "sidebar": #1f2937,
 );
+
+// overrides
+$btn-border-radius: 20px;
+$font-family-sans-serif: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+$offcanvas-horizontal-width: 250px;
 $theme-colors: map-merge($theme-colors, $new-colors);
 
-
-$btn-border-radius: 20px;
-    
 @import "bootstrap/scss/mixins";
 @import "bootstrap/scss/maps";
 @import "bootstrap/scss/root";
