@@ -5,6 +5,13 @@ export default defineSchema({
   users: defineTable({
     username: v.string(),
     externalId: v.string(),
+    userBio: v.optional(v.string()),
+    userPfpUrl: v.optional(v.string()),
+    userRole: v.union(
+      v.literal("ADMIN"),
+      v.literal("MODERATOR"),
+      v.literal("USER")
+    ), 
   })
   .index("byExternalId", ["externalId"])
   .index("byUsername", ["username"]),
@@ -27,6 +34,7 @@ export default defineSchema({
     authorId: v.id("users"),
     content: v.string(),
   }).index("byPost", ["postId"]),
+  // todo: merge downvotes and upvotes into a single table with a vote type?
   downvote: defineTable({
     postId: v.id("post"),
     userId: v.id("users")

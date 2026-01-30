@@ -16,6 +16,8 @@ export const upsertFromClerk = internalMutation({
     const userAttributes = {
       username: data.username || "",
       externalId: data.id,
+      userPfpUrl: data.has_image ? data.image_url : undefined,
+      userRole: "USER" as const, // default role
     };
 
     const user = await userByExternalId(ctx, data.id);
