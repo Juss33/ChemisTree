@@ -6,10 +6,12 @@ const SideBar = () => {
     const [openCollapse, setOpenCollapse] = useState(false);
 
     return <Nav className="justify-content-end flex-grow-1 pe-3 flex-column">
-        <Dropdown.Toggle as={NavLink} className='text-reset' onClick={() => setOpenCollapse(!openCollapse)}>Home</Dropdown.Toggle>
+        <div className='d-flex flex-row'>
+            <Nav.Link className='text-reset' href="/">Home</Nav.Link>
+            <Dropdown.Toggle as={NavLink} className='text-reset ms-3' onClick={() => setOpenCollapse(!openCollapse)}></Dropdown.Toggle>
+        </div>
         <Collapse in={openCollapse}>
             <div className="ps-3">
-                <Nav.Link className="text-reset" href="/">Overview</Nav.Link>
                 <Nav.Link className="text-reset" href="/about-us">About us</Nav.Link>
                 <Nav.Link className="text-reset" href="/features">Features</Nav.Link>
                 <Nav.Link className="text-reset" href="/resources">Resources</Nav.Link>

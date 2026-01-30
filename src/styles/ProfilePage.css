@@ -5,7 +5,7 @@
   padding-top: 69px;
 }
 
-.profile-header {
+/* .profile-header {
   background: white;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -19,22 +19,22 @@
   font-weight: 600;
   color: #1a1a1b;
   margin: 0;
-}
+} */
 
-.posts-container {
+/* .posts-container {
   display: flex;
   flex-direction: column;
   gap: 16px;
-}
+} */
 
-.no-posts {
+/* .no-posts {
   background: white;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 24px;
   text-align: center;
   color: #666;
-}
+} */
 
 .loading {
   background: white;

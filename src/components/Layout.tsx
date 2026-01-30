@@ -11,7 +11,7 @@ const Layout = () => {
           <Col xs={3} lg={2} className="text-bg-sidebar d-none d-md-block">
             <SideBar />
           </Col>
-          <Col>
+          <Col className="pt-3">
             <Outlet />
           </Col>
         </Row>

@@ -15,8 +15,8 @@ const NavBar = () => {
   const navigate = useNavigate();
 
   return <Navbar className="bg-body-tertiary py-0" key="md" expand="md">
-    <Container>
-      <Button variant="light" onClick={() => setShowSidebar(true)} className="d-block d-md-none"><FaBars /></Button>
+    <div className="navbar-container">
+      <Button variant="light" onClick={() => setShowSidebar(true)} className="d-block d-md-none" title="Open sidebar"><FaBars /></Button>
       <Offcanvas
         id={`offcanvasNavbar-expand-md`}
         aria-labelledby={`offcanvasNavbarLabel-expand-md`}
@@ -39,12 +39,12 @@ const NavBar = () => {
       <SearchBar/>
       <Unauthenticated>
         <SignInButton mode="modal">
-          <Button variant="signin">Sign In</Button>
+          <Button variant="signin" title="Sign in">Sign In</Button>
         </SignInButton>
       </Unauthenticated>
       <Authenticated>
         <div className="dropdown-container position-relative">
-          <Button variant="light" onClick={() => setShowDropdown(true)}>
+          <Button variant="light" onClick={() => setShowDropdown(true)} title="Create">
             <FaPlus />
           </Button>
           {showDropdown && (<CreateDropdown isOpen={showDropdown} onClose={()=> setShowDropdown(false)} />)}
@@ -54,7 +54,7 @@ const NavBar = () => {
         </Button>
         <UserButton />
       </Authenticated>
-    </Container>
+    </div>
   </Navbar>; 
 }
 
