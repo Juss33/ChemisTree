@@ -5,7 +5,7 @@ import {useNavigate} from "react-router-dom";
 import CreateDropdown from "./CreateDropDown";
 import {useState} from "react"
 import SearchBar from "./SearchBar";
-import { Button, Container, Navbar, Offcanvas } from "react-bootstrap";
+import { Button, Navbar, Offcanvas } from "react-bootstrap";
 import SideBar from "./Sidebar";
 
 const NavBar = () => {
