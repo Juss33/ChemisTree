@@ -6,9 +6,12 @@ import PostPage from "./pages/PostPage";
 import ProfilePage from "./pages/ProfilePage";
 import SubmitPage from "./pages/SubmitPage";
 import PageNotFound from "./pages/PageNotFound";
+import AboutUsPage from "./pages/AboutUsPage";
+import ContactPage from "./pages/ContactPage";
+import ResourcePage from "./pages/ResourcePage";
+import UpdatesPage from "./pages/UpdatesPage";
 import "./styles/App.css";
 import './styles/App.scss';
-import AboutUsPage from "./pages/AboutUsPage";
 
 function App() {
   return <BrowserRouter>
@@ -19,6 +22,9 @@ function App() {
         <Route path="r/:subredditName/submit" element={<SubmitPage />} />
         <Route path="post/:postId" element={<PostPage />} />
         <Route path="u/:username" element={<ProfilePage />} />
+        <Route path="/resources" element={<ResourcePage />} />
+        <Route path="/updates" element={<UpdatesPage />} />
+        <Route path="/contact" element={<ContactPage />} />
         <Route path="/about-us" element={<AboutUsPage />} />
         {/* 404 page */}
         <Route path="*" element={<PageNotFound />} />

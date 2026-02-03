@@ -27,6 +27,10 @@
 
 // export default SideBar;
 
+//I lowkey had to ask Chatgpt on how to use bootstrap, but i didnt know how to use it to link the pages,
+//So i did the way i normally would
+//saved the code untouched ontop if you still need
+
 import { useState } from "react";
 import { Collapse, Nav } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
@@ -55,10 +59,6 @@ const SideBar = () => {
         <div className="ps-3">
           <Nav.Link as={NavLink} to="/about-us" className="text-reset">
             About us
-          </Nav.Link>
-
-          <Nav.Link as={NavLink} to="/features" className="text-reset">
-            Features
           </Nav.Link>
 
           <Nav.Link as={NavLink} to="/resources" className="text-reset">
