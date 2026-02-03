@@ -5,10 +5,10 @@ import SideBar from "./Sidebar";
 
 const Layout = () => {
   return (
-    <div className="app-container">
+    <div className="app-container min-vh-100">
         <NavBar /> 
-        <Row>
-          <Col xs={3} lg={2} className="text-bg-sidebar d-none d-md-block">
+        <Row className="min-vh-100 g-0">
+          <Col xs={3} lg={2} className="text-bg-sidebar d-none d-md-block min-vh-100">
             <SideBar />
           </Col>
           <Col className="pt-3">

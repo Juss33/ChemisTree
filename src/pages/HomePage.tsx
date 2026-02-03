@@ -1,5 +1,4 @@
 import { Feed } from "../components/feed";
-import "../styles/SideBar.css";
 
 const HomePage = () => {
   return (

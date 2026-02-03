@@ -8,6 +8,7 @@ import SubmitPage from "./pages/SubmitPage";
 import PageNotFound from "./pages/PageNotFound";
 import "./styles/App.css";
 import './styles/App.scss';
+import AboutUsPage from "./pages/AboutUsPage";
 
 function App() {
   return <BrowserRouter>
@@ -18,6 +19,7 @@ function App() {
         <Route path="r/:subredditName/submit" element={<SubmitPage />} />
         <Route path="post/:postId" element={<PostPage />} />
         <Route path="u/:username" element={<ProfilePage />} />
+        <Route path="/about-us" element={<AboutUsPage />} />
         {/* 404 page */}
         <Route path="*" element={<PageNotFound />} />
       </Route>
