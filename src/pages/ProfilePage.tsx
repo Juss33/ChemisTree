@@ -51,10 +51,15 @@ const ProfilePage = () => {
         <h2 className="mb-0">u/{username}</h2>
       </div>
       <div className="profile-container">
-        <h5>User bio</h5>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora molestiae, illum dolores mollitia ad similique ipsa! Debitis a perspiciatis veniam voluptatibus, quis laboriosam nam eos quia, iusto ab consectetur earum?
-        </p>
+        {stats?.userData?.userBio ? (
+          <>
+            <h5>User bio</h5>
+            <p>
+              {stats?.userData?.userBio || ""}
+            </p>
+          </>
+        ) : (<></>) 
+        }
         <h5>Posts</h5>
         <p>Count: {stats?.postCount ?? 0}</p>
         {
