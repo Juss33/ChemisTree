@@ -1,7 +1,8 @@
 export default {
     providers: [
         {
-            domain: "https://humble-kiwi-74.clerk.accounts.dev",
+            // @Juss33 WHen i commit this make sure to put your issuer url into .env
+            domain: process.env.CLERK_JWT_ISSUER_DOMAIN!,
             applicationID: "convex"
         }
     ]
