@@ -12,6 +12,8 @@
   "dependencies": {
     "@clerk/clerk-react": "^5.20.2",
     "@convex-dev/sharded-counter": "^0.1.8",
+    "@milkdown/kit": "^7.18.0",
+    "@milkdown/react": "^7.18.0",
     "bootstrap": "^5.3.8",
     "convex": "^1.17.3",
     "gh-pages": "^6.3.0",
