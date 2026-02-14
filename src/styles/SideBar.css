@@ -1,6 +1,4 @@
-/* ============================= */
-/* Global layout variables */
-/* ============================= */
+
 :root {
   --header-height: 64px;
   --sidebar-width: 240px;
@@ -9,9 +7,6 @@
   --text-muted: #9ca3af;
 }
 
-/* ============================= */
-/* Sidebar */
-/* ============================= */
 .sidebar {
   position: fixed;
   top: var(--header-height);
@@ -44,9 +39,6 @@
   color: white;
 }
 
-/* ============================= */
-/* Main content container */
-/* ============================= */
 .content-container {
   margin-left: var(--sidebar-width);
   padding: 24px;
@@ -62,9 +54,6 @@
   align-items: center;
 }
 
-/* ============================= */
-/* Content cards / sections */
-/* ============================= */
 .content-grid {
   width: 100%;
   max-width: 900px;
@@ -78,9 +67,6 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
-/* ============================= */
-/* Responsive (mobile) */
-/* ============================= */
 @media (max-width: 768px) {
   .sidebar {
     transform: translateX(-100%);
