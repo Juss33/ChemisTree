@@ -62,3 +62,18 @@
     width: 200px;
   }
 }
+
+.sidebar-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 8px 12px;
+  display: block;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.sidebar-link:hover {
+  color: #fff;
+  background-color: #555;
+}
