@@ -7,21 +7,21 @@
 
 //     return <Nav className="justify-content-end flex-grow-1 pe-3 flex-column">
 //         <div className='d-flex flex-row'>
-//             <Nav.Link className='text-reset' href="/">Home</Nav.Link>
-//             <Dropdown.Toggle as={NavLink} className='text-reset ms-3' onClick={() => setOpenCollapse(!openCollapse)}></Dropdown.Toggle>
+//             <Nav.Link className='sidebar-link' href="/">Home</Nav.Link>
+//             <Dropdown.Toggle as={NavLink} className='sidebar-link ms-3' onClick={() => setOpenCollapse(!openCollapse)}></Dropdown.Toggle>
 //         </div>
 //         <Collapse in={openCollapse}>
 //             <div className="ps-3">
-//                 <Nav.Link className="text-reset" href="/about-us">About us</Nav.Link>
-//                 <Nav.Link className="text-reset" href="/features">Features</Nav.Link>
-//                 <Nav.Link className="text-reset" href="/resources">Resources</Nav.Link>
-//                 <Nav.Link className="text-reset" href="/updates">Updates</Nav.Link>
-//                 <Nav.Link className="text-reset" href="/contact">Contact</Nav.Link>
+//                 <Nav.Link className="sidebar-link" href="/about-us">About us</Nav.Link>
+//                 <Nav.Link className="sidebar-link" href="/features">Features</Nav.Link>
+//                 <Nav.Link className="sidebar-link" href="/resources">Resources</Nav.Link>
+//                 <Nav.Link className="sidebar-link" href="/updates">Updates</Nav.Link>
+//                 <Nav.Link className="sidebar-link" href="/contact">Contact</Nav.Link>
 //             </div>
 //         </Collapse>
-//         <Nav.Link className='text-reset' href="/feed">Feed</Nav.Link>
-//         <Nav.Link className='text-reset' href="/projects">Stuff</Nav.Link>
-//         <Nav.Link className='text-reset' href="/journal">Kai's toes</Nav.Link>
+//         <Nav.Link className='sidebar-link' href="/feed">Feed</Nav.Link>
+//         <Nav.Link className='sidebar-link' href="/projects">Stuff</Nav.Link>
+//         <Nav.Link className='sidebar-link' href="/journal">Kai's toes</Nav.Link>
 //     </Nav>; 
 // }
 
@@ -43,13 +43,13 @@ const SideBar = () => {
     <Nav className="justify-content-end flex-grow-1 pe-3 flex-column">
 
       <div className="d-flex flex-row align-items-center">
-        <Nav.Link as={NavLink} to="/" className="text-reset">
+        <Nav.Link as={NavLink} to="/" className="sidebar-link">
           Home
         </Nav.Link>
 
         <button
             type="button"
-            className="btn btn-link text-reset ms-3 p-0"
+            className="btn btn-link sidebar-link ms-3 p-0"
             onClick={() => setOpenCollapse(!openCollapse)}
             >
             ▾
@@ -58,33 +58,33 @@ const SideBar = () => {
 
       <Collapse in={openCollapse}>
         <div className="ps-3">
-          <Nav.Link as={NavLink} to="/about-us" className="text-reset">
+          <Nav.Link as={NavLink} to="/about-us" className="sidebar-link">
             About us
           </Nav.Link>
 
-          <Nav.Link as={NavLink} to="/resources" className="text-reset">
+          <Nav.Link as={NavLink} to="/resources" className="sidebar-link">
             Resources
           </Nav.Link>
 
-          <Nav.Link as={NavLink} to="/updates" className="text-reset">
+          <Nav.Link as={NavLink} to="/updates" className="sidebar-link">
             Updates
           </Nav.Link>
 
-          <Nav.Link as={NavLink} to="/contact" className="text-reset">
+          <Nav.Link as={NavLink} to="/contact" className="sidebar-link">
             Contact
           </Nav.Link>
         </div>
       </Collapse>
 
-      <Nav.Link as={NavLink} to="/feed" className="text-reset">
+      <Nav.Link as={NavLink} to="/feed" className="sidebar-link">
         Feed
       </Nav.Link>
 
-      <Nav.Link as={NavLink} to="/projects" className="text-reset">
+      <Nav.Link as={NavLink} to="/projects" className="sidebar-link">
         Stuff
       </Nav.Link>
 
-      <Nav.Link as={NavLink} to="/journal" className="text-reset">
+      <Nav.Link as={NavLink} to="/journal" className="sidebar-link">
         Kai's toes
       </Nav.Link>
 
