@@ -32,55 +32,62 @@
 //saved the code untouched ontop if you still need
 
 import { useState } from "react";
+import { Collapse, Nav } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
-import "./SideBar.css";
 
 const SideBar = () => {
   const [openCollapse, setOpenCollapse] = useState(false);
 
   return (
-    <nav className="sidebar">
-      {/* Collapsible Section cause why not*/}
-      <div className="sidebar-item">
-        <NavLink to="/" className="sidebar-link">
+    <Nav className="justify-content-end flex-grow-1 pe-3 flex-column">
+
+      <div className="d-flex flex-row align-items-center">
+        <Nav.Link as={NavLink} to="/" className="sidebar-link">
           Home
-        </NavLink>
+        </Nav.Link>
+
         <button
-          className="collapse-toggle"
-          onClick={() => setOpenCollapse(!openCollapse)}
-        >
-          ▾
-        </button>
+            type="button"
+            className="btn btn-link sidebar-link ms-3 p-0"
+            onClick={() => setOpenCollapse(!openCollapse)}
+            >
+            ▾
+            </button>
       </div>
 
-      {openCollapse && (
-        <div className="collapse-links">
-          <NavLink to="/about-us" className="sidebar-link">
+      <Collapse in={openCollapse}>
+        <div className="ps-3">
+          <Nav.Link as={NavLink} to="/about-us" className="sidebar-link">
             About us
-          </NavLink>
-          <NavLink to="/resources" className="sidebar-link">
-            Resources
-          </NavLink>
-          <NavLink to="/updates" className="sidebar-link">
-            Updates
-          </NavLink>
-          <NavLink to="/contact" className="sidebar-link">
-            Contact
-          </NavLink>
-        </div>
-      )}
+          </Nav.Link>
 
-      {/* Other links for sutff */}
-      <NavLink to="/feed" className="sidebar-link">
+          <Nav.Link as={NavLink} to="/resources" className="sidebar-link">
+            Resources
+          </Nav.Link>
+
+          <Nav.Link as={NavLink} to="/updates" className="sidebar-link">
+            Updates
+          </Nav.Link>
+
+          <Nav.Link as={NavLink} to="/contact" className="sidebar-link">
+            Contact
+          </Nav.Link>
+        </div>
+      </Collapse>
+
+      <Nav.Link as={NavLink} to="/feed" className="sidebar-link">
         Feed
-      </NavLink>
-      <NavLink to="/projects" className="sidebar-link">
+      </Nav.Link>
+
+      <Nav.Link as={NavLink} to="/projects" className="sidebar-link">
         Stuff
-      </NavLink>
-      <NavLink to="/journal" className="sidebar-link">
+      </Nav.Link>
+
+      <Nav.Link as={NavLink} to="/journal" className="sidebar-link">
         Kai's toes
-      </NavLink>
-    </nav>
+      </Nav.Link>
+
+    </Nav>
   );
 };
 
