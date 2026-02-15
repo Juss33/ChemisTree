@@ -35,12 +35,6 @@
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-.sidebar {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
 .profile-card,
 .about-community {
   background-color: white;
