@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
   --header-height: 64px;
@@ -5,75 +6,69 @@
   --bg-main: #e5eaef;
   --bg-sidebar: #DAE0E6;
   --text-muted: #9ca3af;
+  --font-main: 'Inter', sans-serif;
 }
 
 .sidebar {
   position: fixed;
   top: var(--header-height);
   left: 0;
-
   width: var(--sidebar-width);
   height: calc(100vh - var(--header-height));
-
   background-color: var(--bg-sidebar);
   padding: 20px;
-
   display: flex;
   flex-direction: column;
   gap: 10px;
+  font-family: var(--font-main);
+  transition: width 0.3s ease;
 }
 
-.sidebar-title {
-  color: white;
-  font-size: 20px;
-  margin-bottom: 12px;
-}
-
-.sidebar a {
-  color: var(--text-muted);
-  text-decoration: none;
-  font-size: 15px;
-}
-
-.sidebar a:hover {
-  color: white;
-}
-
-.content-container {
-  margin-left: var(--sidebar-width);
-  padding: 24px;
-  padding-top: calc(var(--header-height) + 24px);
-
-  width: calc(100% - var(--sidebar-width));
-  min-height: 100vh;
-
-  background-color: var(--bg-main);
-
+.sidebar-item {
   display: flex;
-  flex-direction: column;
   align-items: center;
 }
 
-.content-grid {
-  width: 100%;
-  max-width: 900px;
-  margin-bottom: 24px;
+.sidebar-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.2s ease;
 }
 
-.feed-container {
-  background: white;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+.sidebar-link:hover {
+  color: #6b7280; /* ill prob choose a diff color later */
 }
 
+.sidebar-toggle {
+  font-size: 14px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.collapse-links .sidebar-link {
+  display: block;
+  margin: 6px 0;
+}
+
+/* Responsive: adjust sidebar width on bigger screens */
+@media (min-width: 768px) and (max-width: 1200px) {
+  :root {
+    --sidebar-width: 220px;
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --sidebar-width: 260px;
+  }
+}
+
+/* Mobile: hide sidebar by default */
 @media (max-width: 768px) {
   .sidebar {
     transform: translateX(-100%);
-  }
-
-  .content-container {
-    margin-left: 0;
-    width: 100%;
+    width: 200px;
   }
 }
