@@ -34,11 +34,13 @@
 import { useState } from "react";
 import { Collapse, Nav } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
+import "../styles/SideBar.css"
 
 const SideBar = () => {
   const [openCollapse, setOpenCollapse] = useState(false);
 
   return (
+    <div className="sidebar">
     <Nav className="justify-content-end flex-grow-1 pe-3 flex-column">
 
       <div className="d-flex flex-row align-items-center">
@@ -88,6 +90,7 @@ const SideBar = () => {
       </Nav.Link>
 
     </Nav>
+    </div>
   );
 };
 
