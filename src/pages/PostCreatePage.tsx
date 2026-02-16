@@ -1,5 +1,5 @@
 import { Container } from "react-bootstrap";
-import { Milkdown, MilkdownProvider, useEditor } from "@milkdown/react";
+import { MilkdownProvider } from "@milkdown/react";
 import { MilkdownEditor } from "../components/MilkdownEditor";
 
 const defaultMarkdown = 

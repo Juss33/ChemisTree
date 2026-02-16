@@ -46,7 +46,7 @@ export const MilkdownEditor: React.FC<MilkdownEditorOptions> = ({
     defaultMarkdown = "", 
     canEdit = false
 }: MilkdownEditorOptions) => {
-    const { get } = useEditor((root) =>
+    useEditor((root) =>
         Editor.make()
         // .config(nord)
         .config((ctx) => {
