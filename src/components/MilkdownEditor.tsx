@@ -5,6 +5,7 @@ import { $inputRule } from "@milkdown/kit/utils";
 import { Milkdown, useEditor } from "@milkdown/react";
 import { listItemBlockComponent } from "@milkdown/components/list-item-block"
 import { configureLinkTooltip, linkTooltipPlugin } from "@milkdown/kit/component/link-tooltip";
+import "../styles/MilkdownEditor.scss"
 
 // input rules
 /**
