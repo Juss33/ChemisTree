@@ -1,9 +1,11 @@
+import { Container } from "react-bootstrap";
+
 const ResourcePage = () => {
   return (
     <>
-      <div className="content-container">
+      <Container>
         testing this page, lowkey could put links to pdfs of chem text books
-      </div>
+      </Container>
     </>
   );
 };

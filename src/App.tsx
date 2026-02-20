@@ -10,7 +10,6 @@ import AboutUsPage from "./pages/AboutUsPage";
 import ContactPage from "./pages/ContactPage";
 import ResourcePage from "./pages/ResourcePage";
 import UpdatesPage from "./pages/UpdatesPage";
-import "./styles/App.css";
 import './styles/App.scss';
 import PostCreatePage from "./pages/PostCreatePage";
 

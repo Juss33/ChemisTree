@@ -10,17 +10,34 @@ $container-max-widths: (
   xxl: 1140px
 );
 
-$orange: #FF4500; 
+$orange:             rgb(255, 69, 0); 
+$ctmint:             rgb(204, 255, 140); 
+$ctseafoam:          rgb(129, 222, 118); 
+$ctgrayblue:         rgb(61, 88, 125); 
+$ctlapisblue:        rgb(58, 85, 180);
+$ctcornflowerblue:   rgb(108, 173, 223); 
+$ctskyblue:          rgb(140, 217, 255); 
+
+$ctbgw1:             rgb(218, 224, 230); 
+$ctbgw2:             rgb(151, 157, 163); 
+$ctbgb1:             rgb(31, 29, 29); 
+$ctbgb2:             rgb(66, 64, 64); 
 
 $new-colors: (
-    "orange": $orange,
-    "sidebar": #1f2937,
+    "ctorange": $orange,
+    "sidebar": rgb(248,249,250),
+    "ctmint": $ctmint,
+    "ctseafoam": $ctseafoam, 
+    "ctlapisblue": $ctlapisblue,
+    "ctcornflowerblue": $ctcornflowerblue,
+    "ctskyblue": $ctskyblue
 );
 
 // overrides
 $btn-border-radius: 20px;
 $font-family-sans-serif: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 $offcanvas-horizontal-width: 250px;
+$theme-colors: map-merge($theme-colors, $colors); 
 $theme-colors: map-merge($theme-colors, $new-colors);
 
 @import "bootstrap/scss/mixins";
@@ -30,6 +47,15 @@ $theme-colors: map-merge($theme-colors, $new-colors);
 @import "bootstrap/scss/bootstrap";
 
 // css overrides
+
+.app-container {
+  min-height: 100vh;
+  width: 100%;
+  background-color: $ctbgw1;
+  display: flex;
+  flex-direction: column;
+}
+
 .btn-signin {
     @include button-variant (
         #ff4500, 
@@ -41,8 +67,8 @@ $theme-colors: map-merge($theme-colors, $new-colors);
 }
 
 .container {
-    min-height: 100vh;
-    background-color: var(--bg-main);
+    min-height: 100%;
+    background-color: $ctbgw1;
     padding-top: 1rem;
 }
 
@@ -56,40 +82,6 @@ $theme-colors: map-merge($theme-colors, $new-colors);
     width: 100%; 
     padding: 0 2vw;
 }
-
-.profile-header {
-    display: flex; 
-    flex-direction: row;
-    align-items: end;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid black;
-    margin-bottom: 1rem;
-}
-
-.profile-container {
-    background: white;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 24px;
-}
-
-.profile-pic {
-    object-fit: cover;
-    margin-right: 1rem;
-    width: 5rem;
-    height: 5rem;
-}
-
-.milkdown {
-    .list-item {
-        display: flex;
-        gap: 8px;
-    }
-    .list-item p{
-        margin-bottom: 5px;
-    }
-}
-
 
 @include media-breakpoint-up(md) {
     .navbar-container {

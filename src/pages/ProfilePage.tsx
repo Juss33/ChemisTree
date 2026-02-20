@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { useQuery } from "convex/react";
 import { api } from "../../convex/_generated/api";
 import PostCard from "../components/PostCard";
-import "../styles/SubmitPage.css";
+import "../styles/ProfilePage.scss"
 import { Container, Image } from "react-bootstrap";
 
 const ProfilePage = () => {
@@ -31,9 +31,9 @@ const ProfilePage = () => {
   }
   if (stats?.isError) {
     return (
-      <div className="container">
+      <Container>
         <p>User not found!</p>
-      </div>
+      </Container>
     ); 
   }; 
 
