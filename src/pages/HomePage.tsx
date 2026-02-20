@@ -1,13 +1,12 @@
+import { Container } from "react-bootstrap";
 import { Feed } from "../components/feed";
 
 const HomePage = () => {
   return (
     <>
-      <div className="content-container">
+      <Container>
         <Feed />
-
-
-      </div>
+      </Container>
     </>
   );
 };

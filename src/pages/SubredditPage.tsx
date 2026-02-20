@@ -4,6 +4,7 @@ import { useQuery } from "convex/react";
 import { api } from "../../convex/_generated/api";
 import PostCard from "../components/PostCard";
 import "../styles/SideBar.css";
+import { Container } from "react-bootstrap";
 
 const SubredditPage = () => {
   const { subredditName } = useParams();
@@ -13,15 +14,15 @@ const SubredditPage = () => {
 
   if (!subreddit) {
     return (
-    <div className="content-container">
+    <Container>
       <div className="not-found">
         <h2>Subreddit Not Found</h2>
         <p>The subreddit r/{subredditName} does not exist.</p>
       </div>
-    </div>
+    </Container>
   )}
   return (
-    <div className="content-container">
+    <Container>
       <div className="subreddit-banner">
         <h1>r/{subreddit.name}</h1>
         {subreddit.description && <p>{subreddit.description}</p>}
@@ -38,7 +39,7 @@ const SubredditPage = () => {
         )
         }
       </div>
-    </div>
+    </Container>
   );
 }
 

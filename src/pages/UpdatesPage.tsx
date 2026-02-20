@@ -1,9 +1,11 @@
+import { Container } from "react-bootstrap";
+
 const UpdatesPage = () => {
   return (
     <>
-      <div className="content-container">
+      <Container>
         testing this page, put updates here
-      </div>
+      </Container>
     </>
   );
 };

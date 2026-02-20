@@ -1,9 +1,11 @@
+import { Container } from "react-bootstrap";
+
 const ContactPage = () => {
   return (
     <>
-      <div className="content-container">
+      <Container>
         testing this page, we gon leak Kai's numebr here
-      </div>
+      </Container>
     </>
   );
 };

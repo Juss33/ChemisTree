@@ -1,7 +1,9 @@
+import { Container } from "react-bootstrap";
+
 const AboutUsPage = () => {
   return (
     <>
-      <div className="content-container">
+      <Container>
         <div className="content-grid">
           <div className="feed-container">
             <h2>About Us:</h2>
@@ -25,7 +27,7 @@ const AboutUsPage = () => {
             </p>
           </div>
         </div>
-      </div>
+      </Container>
     </>
   );
 };
