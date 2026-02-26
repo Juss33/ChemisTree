@@ -12,6 +12,7 @@ import ResourcePage from "./pages/ResourcePage";
 import UpdatesPage from "./pages/UpdatesPage";
 import './styles/App.scss';
 import PostCreatePage from "./pages/PostCreatePage";
+import PostViewPage from "./pages/PostViewPage";
 
 function App() {
   return <BrowserRouter>
@@ -27,6 +28,7 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/about-us" element={<AboutUsPage />} />
         <Route path="/test2" element={<PostCreatePage />} />
+        <Route path="/test3" element={<PostViewPage />} />
         {/* 404 page */}
         <Route path="*" element={<PageNotFound />} />
       </Route>
