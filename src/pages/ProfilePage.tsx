@@ -19,7 +19,7 @@ const ProfilePage = () => {
           src="/default-profile-pic.png" // TODO
           alt="Profile"
           roundedCircle
-          className="profile-pic"
+          className="profile-pic-5"
         />
         <h2 className="mb-0">u/{username}</h2>
       </div>
@@ -46,7 +46,7 @@ const ProfilePage = () => {
           src={stats?.userData?.userPfpUrl || "/default-profile-pic.png"} // TODO
           alt="Profile"
           roundedCircle
-          className="profile-pic"
+          className="profile-pic-5"
         />
         <h2 className="mb-0">u/{username}</h2>
       </div>
