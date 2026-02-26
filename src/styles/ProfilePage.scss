@@ -1,22 +1,23 @@
-@use "main"; 
+@use "variables"; 
 
 .profile-header {
     display: flex; 
     flex-direction: row;
     align-items: end;
     padding-bottom: 0.5rem;
-    border-bottom: 1px solid main.$ctbgw2;
+    border-bottom: 1px solid variables.$ctbgw2;
     margin-bottom: 1rem;
 }
 
 .profile-container {
     background: white;
-    border: 1px solid main.$ctbgw2;
+    border: 1px solid variables.$ctbgw2;
     border-radius: 4px;
     padding: 24px;
 }
 
-.profile-pic {
+// might be redundant? main.scss:88
+.profile-pic-5 {
     object-fit: cover;
     margin-right: 1rem;
     width: 5rem;
@@ -29,6 +30,6 @@
   border-radius: 8px;
   padding: 24px;
   text-align: center;
-  color: main.$ctbgw2;
+  color: variables.$ctbgw2;
   margin-top: 16px;
 }

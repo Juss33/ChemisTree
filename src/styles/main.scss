@@ -1,49 +1,35 @@
+@use "variables"; 
+
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";
 @import "bootstrap/scss/variables-dark";
-// custom variables here
+// overrides
 $container-max-widths: (
-  sm: 540px,
+  sm: 539px,
   md: 540px,
   lg: 720px,
   xl: 960px,
   xxl: 1140px
 );
-
-$orange:             rgb(255, 69, 0); 
-$ctmint:             rgb(204, 255, 140); 
-$ctseafoam:          rgb(129, 222, 118); 
-$ctgrayblue:         rgb(61, 88, 125); 
-$ctlapisblue:        rgb(58, 85, 180);
-$ctcornflowerblue:   rgb(108, 173, 223); 
-$ctskyblue:          rgb(140, 217, 255); 
-
-$ctbgw1:             rgb(218, 224, 230); 
-$ctbgw2:             rgb(151, 157, 163); 
-$ctbgb1:             rgb(31, 29, 29); 
-$ctbgb2:             rgb(66, 64, 64); 
-
-$new-colors: (
-    "ctorange": $orange,
-    "sidebar": rgb(248,249,250),
-    "ctmint": $ctmint,
-    "ctseafoam": $ctseafoam, 
-    "ctlapisblue": $ctlapisblue,
-    "ctcornflowerblue": $ctcornflowerblue,
-    "ctskyblue": $ctskyblue
-);
-
-// overrides
 $btn-border-radius: 20px;
 $font-family-sans-serif: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 $offcanvas-horizontal-width: 250px;
 $theme-colors: map-merge($theme-colors, $colors); 
-$theme-colors: map-merge($theme-colors, $new-colors);
+$theme-colors: map-merge($theme-colors, variables.$new-colors);
+$theme-colors: map-merge($theme-colors, variables.$core-colors);
 
-@import "bootstrap/scss/mixins";
 @import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
 @import "bootstrap/scss/root";
-// main bs styles
+
+// display modes
+@include color-mode(dark) {
+  --bs-ctbg1:     #{variables.$ctbgb1}; 
+  --bs-ctbg1-rgb: #{variables.$ctbgb1-rgb};
+  --bs-ctbg2:     #{variables.$ctbgb2}; 
+  --bs-ctbg2-rgb: #{variables.$ctbgb2-rgb};
+}
+
 @import "bootstrap/scss/bootstrap";
 
 // css overrides
@@ -51,7 +37,7 @@ $theme-colors: map-merge($theme-colors, $new-colors);
 .app-container {
   min-height: 100vh;
   width: 100%;
-  background-color: $ctbgw1;
+  background-color: var(--bs-ctbg1);
   display: flex;
   flex-direction: column;
 }
@@ -68,7 +54,7 @@ $theme-colors: map-merge($theme-colors, $new-colors);
 
 .container {
     min-height: 100%;
-    background-color: $ctbgw1;
+    background-color: var(--bs-ctbg1);
     padding-top: 1rem;
 }
 
@@ -97,4 +83,25 @@ $theme-colors: map-merge($theme-colors, $new-colors);
     .navbar-container {
         margin: 0 15vw;  
     }
+}
+
+.profile-pic-5 {
+    object-fit: cover;
+    margin-right: 1rem;
+    width: 5rem;
+    height: 5rem;
+}
+
+.profile-pic-3 {
+    object-fit: cover;
+    margin-right: 1rem;
+    width: 3rem;
+    height: 3rem;
+}
+
+.profile-pic-2 {
+    object-fit: cover;
+    margin-right: 1rem;
+    width: 2rem;
+    height: 2rem;
 }
