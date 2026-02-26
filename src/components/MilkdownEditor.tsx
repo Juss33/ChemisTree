@@ -1,10 +1,12 @@
 import { defaultValueCtx, Editor, editorViewOptionsCtx, rootCtx } from "@milkdown/kit/core";
 import { commonmark, linkSchema, } from "@milkdown/kit/preset/commonmark";
 import { InputRule, } from "@milkdown/kit/prose/inputrules";
-import { $inputRule } from "@milkdown/kit/utils";
-import { Milkdown, useEditor } from "@milkdown/react";
+import { $inputRule, getMarkdown } from "@milkdown/kit/utils";
+import { Milkdown, useEditor, useInstance } from "@milkdown/react";
 import { listItemBlockComponent } from "@milkdown/components/list-item-block"
 import { configureLinkTooltip, linkTooltipPlugin } from "@milkdown/kit/component/link-tooltip";
+import { imageBlockComponent } from "@milkdown/components/image-block"; 
+import { history } from '@milkdown/kit/plugin/history'
 import "../styles/MilkdownEditor.scss"
 
 // input rules
@@ -33,9 +35,9 @@ const AddLinkInputRule = $inputRule((ctx) => {
 /** Options in creating new editor */
 interface MilkdownEditorOptions {
     /** Default content to show on load */ 
-    defaultMarkdown: string, 
+    defaultMarkdown?: string, 
     /** whether the editor is editable (readonly or not?) */
-    canEdit: boolean, 
+    canEdit?: boolean, 
 }
 
 /** element for the milkdown editor
@@ -47,6 +49,7 @@ export const MilkdownEditor: React.FC<MilkdownEditorOptions> = ({
     defaultMarkdown = "", 
     canEdit = false
 }: MilkdownEditorOptions) => {
+    // const { get } = 
     useEditor((root) =>
         Editor.make()
         // .config(nord)
@@ -62,10 +65,38 @@ export const MilkdownEditor: React.FC<MilkdownEditorOptions> = ({
         .config(configureLinkTooltip)
         .use(commonmark)
         .use(listItemBlockComponent)
+        .use(imageBlockComponent)
         .use(linkTooltipPlugin)
         .use(AddLinkInputRule)
+        .use(history)
         ,  
     );
 
     return <Milkdown />;
+};
+
+
+
+export const MilkdownEditorControls: React.FC = () => {
+    const [isLoading, getInstance] = useInstance();
+
+    const handleSave = () => {
+        if (isLoading) return;
+
+        const editor = getInstance();
+        if (!editor) return;
+
+        const content = editor.action(getMarkdown());
+        // Do something with the content
+
+        console.log(content); 
+    };
+
+    // const handleSaveDraft: () => void
+
+    return (
+        <button type="button" title="Save" onClick={handleSave} disabled={isLoading}>
+        Save
+        </button>
+    );
 };

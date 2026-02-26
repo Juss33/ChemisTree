@@ -1,6 +1,6 @@
 import { Container } from "react-bootstrap";
 import { MilkdownProvider } from "@milkdown/react";
-import { MilkdownEditor } from "../components/MilkdownEditor";
+import { MilkdownEditor, MilkdownEditorControls } from "../components/MilkdownEditor";
 
 const defaultMarkdown = 
 `# This is a sample text
@@ -28,7 +28,8 @@ const PostCreatePage = () => {
     return (
         <Container>
             <MilkdownProvider>
-                <MilkdownEditor defaultMarkdown={defaultMarkdown} canEdit={true} />
+                <MilkdownEditor defaultMarkdown={defaultMarkdown} canEdit={true}/>
+                <MilkdownEditorControls />
             </MilkdownProvider>
         </Container>
     )
