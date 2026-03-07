@@ -34,11 +34,11 @@
 
 import { NavLink } from "react-router-dom";
 
-type SideBarProps = {
+type Props = {
   open: boolean;
 };
 
-const SideBar = ({ open }: SideBarProps) => {
+export default function SideBar({ open }: Props) {
   if (!open) return null;
 
   return (
@@ -50,6 +50,4 @@ const SideBar = ({ open }: SideBarProps) => {
       <NavLink to="/contact" className="sidebar-link">Contact</NavLink>
     </nav>
   );
-};
-
-export default SideBar;
+}
