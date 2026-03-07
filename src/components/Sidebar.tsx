@@ -34,14 +34,20 @@
 
 import { NavLink } from "react-router-dom";
 
-const SideBar = () => {
+type SideBarProps = {
+  open: boolean;
+};
+
+const SideBar = ({ open }: SideBarProps) => {
+  if (!open) return null;
+
   return (
     <nav className="sidebar">
       <NavLink to="/" className="sidebar-link">Home</NavLink>
       <NavLink to="/about-us" className="sidebar-link">About Us</NavLink>
-      <NavLink to="/resources" className="sidebar-link">Stuff</NavLink>
-      <NavLink to="/updates" className="sidebar-link">Kai's toes</NavLink>
-      <NavLink to="/contact" className="sidebar-link">Kai's toes</NavLink>
+      <NavLink to="/resources" className="sidebar-link">Resources</NavLink>
+      <NavLink to="/updates" className="sidebar-link">Updates</NavLink>
+      <NavLink to="/contact" className="sidebar-link">Contact</NavLink>
     </nav>
   );
 };
