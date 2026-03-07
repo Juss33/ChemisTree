@@ -39,7 +39,6 @@ type Props = {
 };
 
 export default function SideBar({ open }: Props) {
-  if (!open) return null;
 
   return (
     <nav className="sidebar">
