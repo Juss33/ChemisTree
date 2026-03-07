@@ -28,7 +28,7 @@ const NavBar = () => {
           <Offcanvas.Title id="offcanvasNavbarLabel-expand-md">ChemisTree</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          <SideBar open={true}/>
+          <SideBar />
         </Offcanvas.Body>
       </Offcanvas>
 

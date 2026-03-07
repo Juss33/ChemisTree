@@ -34,11 +34,7 @@
 
 import { NavLink } from "react-router-dom";
 
-type Props = {
-  open: boolean;
-};
-
-export default function SideBar({ open }: Props) {
+export default function SideBar() {
 
   return (
     <nav className="sidebar">

@@ -17,7 +17,7 @@ function Layout() {
       <Row className="g-0 flex-grow-1">
         {open && (
           <Col xs={3} lg={2} className="text-bg-sidebar d-none d-md-block">
-            <SideBar open={open} />
+            <SideBar />
           </Col>
         )}
         <Col>
