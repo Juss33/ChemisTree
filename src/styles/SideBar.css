@@ -4,6 +4,13 @@
   flex-direction: column;
   gap: 10px;
 }
+.sidebar-closed {
+  margin-left: -250px;
+}
+
+.sidebar-open {
+  margin-left: 0;
+}
 
 .sidebar-link {
   color: #000;
