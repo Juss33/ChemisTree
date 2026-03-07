@@ -10,8 +10,10 @@ function Layout() {
   return (
     <div className="app-container">
       <NavBar />
-      <button onClick={() => setOpen(!open)}>Toggle</button>
-
+      <button
+        className="btn btn-outline-secondary btn-sm"
+        onClick={() => setOpen(!open)}
+      >☰</button>
       <Row className="g-0 flex-grow-1">
         {open && (
           <Col xs={3} lg={2} className="text-bg-sidebar d-none d-md-block">
