@@ -7,6 +7,7 @@ import { listItemBlockComponent } from "@milkdown/components/list-item-block"
 import { configureLinkTooltip, linkTooltipPlugin } from "@milkdown/kit/component/link-tooltip";
 import { imageBlockComponent } from "@milkdown/components/image-block"; 
 import { history } from '@milkdown/kit/plugin/history'
+import { math } from "@milkdown/plugin-math"
 import "../styles/MilkdownEditor.scss"
 
 // input rules
@@ -69,13 +70,16 @@ export const MilkdownEditor: React.FC<MilkdownEditorOptions> = ({
         .use(linkTooltipPlugin)
         .use(AddLinkInputRule)
         .use(history)
+        .use(math)
         ,  
     );
 
     return <Milkdown />;
 };
 
-
+export const MilkdownStylingControls: React.FC = () => {
+    // I don't know yet
+}
 
 export const MilkdownEditorControls: React.FC = () => {
     const [isLoading, getInstance] = useInstance();

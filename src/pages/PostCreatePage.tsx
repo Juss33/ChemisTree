@@ -13,7 +13,9 @@ Chemistree is the goat
 
 
 Feel free to type here...
-
+$$
+\\int_0^\\infty e^{-x^2} dx = \\frac{\\sqrt{\\pi}}{2}
+$$
 Click on [this link](https://bongo.cat/) to get a cute cat!
 
 - sample list
