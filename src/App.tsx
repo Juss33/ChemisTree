@@ -28,7 +28,7 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/about-us" element={<AboutUsPage />} />
         <Route path="/test2" element={<PostCreatePage />} />
-        <Route path="/test3" element={<PostViewPage />} />
+        <Route path="/test3/:postId" element={<PostViewPage />} />
         {/* 404 page */}
         <Route path="*" element={<PageNotFound />} />
       </Route>
