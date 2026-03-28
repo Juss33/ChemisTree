@@ -1,0 +1,41 @@
+@use "variables"; 
+
+.post-container>* {
+    border-bottom: 1px solid var(--bs-ctbg3);
+    margin: 0 0 1rem 0;
+    padding: 0 0 1rem 0;
+}
+
+.post-profile-card {
+    display: flex; 
+    flex-direction: row; 
+    align-items: center; 
+    padding: 0.5rem; 
+    margin: 0.5rem 0;
+    background-color: var(--bs-ctbg2);
+    width: fit-content; 
+    border-radius: 13px;
+}
+
+.post-tags, #subreddit {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.post-tags>*, #subreddit>* {
+    padding: 0px 7px 2px 7px; 
+    border: 1px solid var(--bs-ctbg2);
+    border-radius: 3px;
+}
+
+a.link-hidden {
+    color: var(--bs-body-color); 
+    font-weight: 500;
+}
+
+a.link-hidden:hover {
+    color: var(--bs-body-color); 
+    font-weight: 500;
+    border-bottom: 1px solid var(--bs-body-color);
+}
