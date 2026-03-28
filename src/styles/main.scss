@@ -28,6 +28,8 @@ $theme-colors: map-merge($theme-colors, variables.$core-colors);
   --bs-ctbg1-rgb: #{variables.$ctbgb1-rgb};
   --bs-ctbg2:     #{variables.$ctbgb2}; 
   --bs-ctbg2-rgb: #{variables.$ctbgb2-rgb};
+  --bs-ctbg3:     #{variables.$ctbgb3}; 
+  --bs-ctbg3-rgb: #{variables.$ctbgb3-rgb};
 }
 
 @import "bootstrap/scss/bootstrap";
