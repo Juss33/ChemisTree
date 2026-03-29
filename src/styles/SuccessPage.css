@@ -1,0 +1,21 @@
+.success-card {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 40px;
+  text-align: center;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.success-card p {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #28a745;
+}
+
+.success-card p:first-child {
+  font-size: 24px;
+  font-weight: bold;
+}

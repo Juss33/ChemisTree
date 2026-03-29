@@ -11,9 +11,12 @@ import ContactPage from "./pages/ContactPage";
 import ResourcePage from "./pages/ResourcePage";
 import UpdatesPage from "./pages/UpdatesPage";
 import './styles/App.scss';
+import InstructionPage from "./pages/InstructionPage";
+import RegistrationPage from "./pages/RegistrationPage";
+import SuccessPage from "./pages/SuccessPage";
 
 function App() {
-  return <BrowserRouter>
+  return <BrowserRouter basename="/ChemisTree">
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<HomePage />} />
@@ -27,6 +30,9 @@ function App() {
         <Route path="/about-us" element={<AboutUsPage />} />
         {/* 404 page */}
         <Route path="*" element={<PageNotFound />} />
+        <Route path="instruction" element={<InstructionPage />} />
+        <Route path="registration" element={<RegistrationPage />} />
+        <Route path="success" element={<SuccessPage />} />
       </Route>
     </Routes>
   </BrowserRouter>

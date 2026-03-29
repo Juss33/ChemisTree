@@ -14,6 +14,7 @@ import type * as http from "../http.js";
 import type * as image from "../image.js";
 import type * as leaderboard from "../leaderboard.js";
 import type * as post from "../post.js";
+import type * as registration from "../registration.js";
 import type * as subreddit from "../subreddit.js";
 import type * as users from "../users.js";
 import type * as vote from "../vote.js";
@@ -31,6 +32,7 @@ declare const fullApi: ApiFromModules<{
   image: typeof image;
   leaderboard: typeof leaderboard;
   post: typeof post;
+  registration: typeof registration;
   subreddit: typeof subreddit;
   users: typeof users;
   vote: typeof vote;
