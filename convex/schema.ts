@@ -35,5 +35,14 @@ export default defineSchema({
     postId: v.id("post"),
     userId: v.id("users")
   }).index("byPost", ["postId"])
-  .index("byUser", ["userId"])
+  .index("byUser", ["userId"]),
+  registration: defineTable({
+    schoolDistrict: v.string(),
+    schoolName: v.string(),
+    address: v.string(),
+    email: v.string(),
+    nstudents: v.number(),
+    acknowledge: v.boolean(),
+    instructions: v.boolean(),
+  }),
 });

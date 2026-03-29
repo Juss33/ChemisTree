@@ -1,4 +1,5 @@
 import { Feed } from "../components/feed";
+import { Link } from "react-router-dom";
 import "../styles/SideBar.css";
 
 const HomePage = () => {
@@ -7,12 +8,13 @@ const HomePage = () => {
       {/* Sidebar */}
       <nav className="sidebar">
         <h2 className="sidebar-title">ChemisTREE</h2>
-        <a href="/">Home</a>
-        <a href="/feed">Feed</a>
-        <a href="/projects">Stuff</a>
-        <a href="/journal">Kai's toes</a>
-        <a href="/resources">Resources</a>
-        <a href="/contact">Contact</a>
+        <Link to="/">Home</Link>
+        <Link to="/feed">Feed</Link>
+        <Link to="/projects">Stuff</Link>
+        <Link to="/journal">Kai's toes</Link>
+        <Link to="/resources">Resources</Link>
+        <Link to="/contact">Contact</Link>
+        <Link to="/instruction">Instructions</Link>
       </nav>
 
       {/* Main Content */}
