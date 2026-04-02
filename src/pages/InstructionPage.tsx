@@ -22,7 +22,7 @@ const InstructionPage = () => {
         </div>
 
         <div className="testing-action">
-          <a href="/ChemisTree/registration" className="apply-button">Go to apply for the competition</a>
+          <a href="/registration" className="apply-button">Go to apply for the competition</a>
         </div>
       </div>
     </div>
