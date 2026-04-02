@@ -16,7 +16,7 @@ import RegistrationPage from "./pages/RegistrationPage";
 import SuccessPage from "./pages/SuccessPage";
 
 function App() {
-  return <BrowserRouter>
+  return <BrowserRouter basename="/ChemisTree">
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<HomePage />} />
