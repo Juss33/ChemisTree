@@ -1,4 +1,4 @@
-import '../styles/SuccessPage.css';
+import '../../styles/SuccessPage.css';
 
 const SuccessPage = () => {
   return (

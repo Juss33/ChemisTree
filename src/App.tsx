@@ -11,9 +11,9 @@ import ContactPage from "./pages/ContactPage";
 import ResourcePage from "./pages/ResourcePage";
 import UpdatesPage from "./pages/UpdatesPage";
 import './styles/App.scss';
-import InstructionPage from "./pages/InstructionPage";
-import RegistrationPage from "./pages/RegistrationPage";
-import SuccessPage from "./pages/SuccessPage";
+import InstructionPage from "./pages/nwss-competition/InstructionPage";
+import RegistrationPage from "./pages/nwss-competition/RegistrationPage";
+import SuccessPage from "./pages/nwss-competition/SuccessPage";
 
 function App() {
   return <BrowserRouter>
@@ -28,11 +28,14 @@ function App() {
         <Route path="/updates" element={<UpdatesPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/about-us" element={<AboutUsPage />} />
+
+        <Route path="/nwss-competition" > 
+          <Route index element={<InstructionPage />} />
+          <Route path="registration" element={<RegistrationPage />} />
+          <Route path="success" element={<SuccessPage />} />
+        </Route>
         {/* 404 page */}
         <Route path="*" element={<PageNotFound />} />
-        <Route path="instruction" element={<InstructionPage />} />
-        <Route path="registration" element={<RegistrationPage />} />
-        <Route path="success" element={<SuccessPage />} />
       </Route>
     </Routes>
   </BrowserRouter>
