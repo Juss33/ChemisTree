@@ -43,6 +43,7 @@ export default function SideBar() {
       <NavLink to="/resources" className="sidebar-link">Resources</NavLink>
       <NavLink to="/updates" className="sidebar-link">Updates</NavLink>
       <NavLink to="/contact" className="sidebar-link">Contact</NavLink>
+      <NavLink to="/nwss-competition" className="sidebar-link">NWSS OChem Nomenclature Competition</NavLink>
     </nav>
   );
 }
