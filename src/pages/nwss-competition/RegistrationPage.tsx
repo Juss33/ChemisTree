@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useMutation } from 'convex/react';
 import { api } from '../../../convex/_generated/api';
 import '../../styles/RegistrationPage.css';
-import { Button, Col, Container, Form, Row } from 'react-bootstrap';
+import { Button, Col, Container, Form } from 'react-bootstrap';
 
 const RegistrationPage = () => {
   const [formData, setFormData] = useState({
@@ -42,13 +42,11 @@ const RegistrationPage = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     const submitButton = document.getElementById("submitButton") as HTMLButtonElement;
-    submitButton.disabled = true; 
-    console.log(submitButton.disabled); 
+    submitButton.disabled = true;
     e.preventDefault();
 
     if (!validateForm()) {
-      submitButton.disabled = false; 
-    console.log(submitButton.disabled); 
+      submitButton.disabled = false;
       return
     };
 
@@ -66,8 +64,7 @@ const RegistrationPage = () => {
     } catch (error) {
       console.error('Error submitting registration:', error);
       setError('An error occurred while submitting. Please try again.');
-      submitButton.disabled = false; 
-    console.log(submitButton.disabled); 
+      submitButton.disabled = false;
     }
   };
 
@@ -82,7 +79,7 @@ const RegistrationPage = () => {
         </div>
       )}
 
-      <Form onSubmit={handleSubmit} validated={validated} noValidate className='pt-0'> 
+      <Form onSubmit={handleSubmit} validated={validated} noValidate className='pt-0'>
         <Form.Group className="mb-3">
           <Form.Label>School District</Form.Label>
           <Form.Control required type='text' id='schoolDistrict' name='schoolDistrict' value={formData.schoolDistrict} onChange={handleChange} />
@@ -98,23 +95,23 @@ const RegistrationPage = () => {
         <Form.Group className="mb-3">
           <Form.Label>Teacher's Email Address</Form.Label>
           <Form.Control required type='email' id='email' name='email' value={formData.email} onChange={handleChange} />
-          <Form.Control.Feedback type='invalid'>Invalid email format</Form.Control.Feedback> 
-          <Form.Control.Feedback type='valid'>Looks good!</Form.Control.Feedback> 
+          <Form.Control.Feedback type='invalid'>Invalid email format</Form.Control.Feedback>
+          <Form.Control.Feedback type='valid'>Looks good!</Form.Control.Feedback>
         </Form.Group>
         <Form.Group as={Col} md="6" className="mb-3">
           <Form.Label>Number of Students Parcitipating</Form.Label>
-          <Form.Control required type='number' id='nstudents' name='nstudents' value={formData.nstudents} onChange={handleChange} min="1"/>
-          <Form.Control.Feedback type='invalid'>Number of students participating must be greater than 1. </Form.Control.Feedback> 
-          <Form.Control.Feedback type='valid'>Looks good!</Form.Control.Feedback> 
+          <Form.Control required type='number' id='nstudents' name='nstudents' value={formData.nstudents} onChange={handleChange} min="1" />
+          <Form.Control.Feedback type='invalid'>Number of students participating must be greater than 1. </Form.Control.Feedback>
+          <Form.Control.Feedback type='valid'>Looks good!</Form.Control.Feedback>
         </Form.Group>
         <Form.Group className="mb-3">
-          <Form.Check 
-            required 
-            label="I acknowledge that this contest is free for participants and is provided by New Westminster Secondary School Science Club." 
-            id="acknowledge" 
-            name="acknowledge" 
-            checked={formData.acknowledge} 
-            onChange={handleChange} 
+          <Form.Check
+            required
+            label="I acknowledge that this contest is free for participants and is provided by New Westminster Secondary School Science Club."
+            id="acknowledge"
+            name="acknowledge"
+            checked={formData.acknowledge}
+            onChange={handleChange}
             className='mb-3'
             feedback="Maybe you should acknowledge this? "
             feedbackType='invalid'
@@ -122,13 +119,13 @@ const RegistrationPage = () => {
           <Form.Control.Feedback type='invalid'>Maybe you should acknowledge this? </Form.Control.Feedback>
         </Form.Group>
         <Form.Group className='mb-3'>
-          <Form.Check 
-            required 
-            label="By registering to participate, I agree to invigilate the contests per the instructions provided. (i.e., printing out and distributing the contest, supervising the students participating in the contest, including answering questions in the online survey, and adhering to the time limit = 40 minutes)" 
-            id="instructions" 
-            name="instructions" 
-            checked={formData.instructions} 
-            onChange={handleChange} 
+          <Form.Check
+            required
+            label="By registering to participate, I agree to invigilate the contests per the instructions provided. (i.e., printing out and distributing the contest, supervising the students participating in the contest, including answering questions in the online survey, and adhering to the time limit = 40 minutes)"
+            id="instructions"
+            name="instructions"
+            checked={formData.instructions}
+            onChange={handleChange}
             feedback="You must agree before submitting. "
             feedbackType='invalid'
           />

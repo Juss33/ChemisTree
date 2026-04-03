@@ -1,4 +1,5 @@
 
+import { Link } from "react-router-dom";
 import "../../styles/InstructionPage.css";
 
 const InstructionPage = () => {
@@ -22,7 +23,7 @@ const InstructionPage = () => {
         </div>
 
         <div className="testing-action">
-          <a href="/nwss-competition/registration" className="apply-button">Go to apply for the competition</a>
+          <Link to="/nwss-competition/registration" className="apply-button">Go to apply for the competition</Link>
         </div>
       </div>
     </div>
