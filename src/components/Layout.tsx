@@ -5,17 +5,13 @@ import SideBar from "./Sidebar";
 import { useState } from "react";
 
 function Layout() {
-  const [open, setOpen] = useState(true);
+  const [showSidebar, setShowSidebar] = useState(false);
 
   return (
     <div className="app-container">
-      <NavBar />
-      <button
-        className="btn btn-outline-secondary btn-sm"
-        onClick={() => setOpen(!open)}
-      >☰</button>
+      <NavBar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
       <Row className="g-0 flex-grow-1">
-        {open && (
+        {showSidebar && (
           <Col xs={3} lg={2} className="text-bg-sidebar d-none d-md-block">
             <SideBar />
           </Col>

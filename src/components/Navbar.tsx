@@ -8,17 +8,23 @@ import SearchBar from "./SearchBar";
 import { Button, Navbar, Offcanvas } from "react-bootstrap";
 import SideBar from "./Sidebar";
 
-const NavBar = () => {
-  const [showSidebar, setShowSidebar] = useState(false);
+interface NavBarProps {
+  showSidebar: boolean, 
+  setShowSidebar: React.Dispatch<React.SetStateAction<boolean>>
+}; 
+
+const NavBar = ({showSidebar, setShowSidebar}: NavBarProps) => {
   const [showDropdown,setShowDropdown] = useState(false);
   const {user} = useUser();
   const navigate = useNavigate();
 
   return <Navbar className="bg-body-tertiary py-0" key="md" expand="md">
     <div className="navbar-container">
-      <Button variant="light" onClick={() => setShowSidebar(true)} className="d-block d-md-none" title="Open sidebar"><FaBars /></Button>
-      <Offcanvas
+      <Button variant="light" onClick={() => setShowSidebar(!showSidebar)} className="d-block" title="Open sidebar"><FaBars /></Button>
+      <Offcanvas 
         id={`offcanvasNavbar-expand-md`}
+        className="d-md-none"
+        responsive="md"
         aria-labelledby={`offcanvasNavbarLabel-expand-md`}
         placement="start"
         show={showSidebar}
