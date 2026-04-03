@@ -29,10 +29,10 @@ const RegistrationPage = () => {
 
   const [validated, setValidated] = useState(false);
 
-  // TODO: fix email validation
   const validateForm = () => {
     setValidated(true);
-    if (!formData.schoolDistrict.trim() || !formData.schoolName.trim() || !formData.address.trim() || !formData.email.trim() || !formData.nstudents.trim() || isNaN(Number(formData.nstudents)) || Number(formData.nstudents) <= 0 || !formData.acknowledge || !formData.instructions) {
+    var isEmailValid = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(formData.email);
+    if (!formData.schoolDistrict.trim() || !formData.schoolName.trim() || !formData.address.trim() || !formData.email.trim() || !formData.nstudents.trim() || isNaN(Number(formData.nstudents)) || Number(formData.nstudents) <= 0 || !formData.acknowledge || !formData.instructions || !isEmailValid) {
       setError('Please fill in all required fields and agree to the terms.');
       return false;
     }
@@ -41,8 +41,16 @@ const RegistrationPage = () => {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
+    const submitButton = document.getElementById("submitButton") as HTMLButtonElement;
+    submitButton.disabled = true; 
+    console.log(submitButton.disabled); 
     e.preventDefault();
-    if (!validateForm()) return;
+
+    if (!validateForm()) {
+      submitButton.disabled = false; 
+    console.log(submitButton.disabled); 
+      return
+    };
 
     try {
       await createRegistration({
@@ -58,6 +66,8 @@ const RegistrationPage = () => {
     } catch (error) {
       console.error('Error submitting registration:', error);
       setError('An error occurred while submitting. Please try again.');
+      submitButton.disabled = false; 
+    console.log(submitButton.disabled); 
     }
   };
 
@@ -81,16 +91,10 @@ const RegistrationPage = () => {
           <Form.Label>School Name</Form.Label>
           <Form.Control required type='text' id='schoolName' name='schoolName' value={formData.schoolName} onChange={handleChange} />
         </Form.Group>
-        <Row className="mb-3">
-          <Form.Group as={Col} md="8">
-            <Form.Label>City, Province</Form.Label>
-            <Form.Control required type='text' id='address' name='address' value={formData.address} onChange={handleChange} />
-          </Form.Group>
-          <Form.Group as={Col} md="4">
-            <Form.Label>Province</Form.Label>
-            <Form.Control required type='text' id='prov' name='prov'  onChange={handleChange} />
-          </Form.Group>
-        </Row>
+        <Form.Group className='mb-3'>
+          <Form.Label>City, Province</Form.Label>
+          <Form.Control required type='text' id='address' name='address' value={formData.address} onChange={handleChange} />
+        </Form.Group>
         <Form.Group className="mb-3">
           <Form.Label>Teacher's Email Address</Form.Label>
           <Form.Control required type='email' id='email' name='email' value={formData.email} onChange={handleChange} />
@@ -129,7 +133,7 @@ const RegistrationPage = () => {
             feedbackType='invalid'
           />
         </Form.Group>
-        <Button type='submit'>Submit</Button>
+        <Button type='submit' id="submitButton">Submit</Button>
       </Form>
     </Container>
   );
