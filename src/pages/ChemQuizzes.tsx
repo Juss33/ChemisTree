@@ -2,24 +2,24 @@ import { Container } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { Button } from "react-bootstrap";
 
-const navigate = useNavigate();
+const ChemQuizzes = () => {
+  const navigate = useNavigate();
 
-const goToQuiz = () => {
+  const goToQuiz = () => {
     navigate("/quiz");
   };
-const ChemQuizzes = () => {
+
   return (
-    <>
-      <Container>
-        <div className="content-grid">
-            <div className="feed-container">
-                <h2 className="section-title">Solubility</h2>
-                <Button variant="light" onClick={goToQuiz} title="Create">
-                </Button>
-            </div>
+    <Container>
+      <div className="content-grid">
+        <div className="feed-container">
+          <h2 className="section-title">Solubility</h2>
+          <Button variant="light" onClick={goToQuiz} title="Create">
+            Start Quiz
+          </Button>
         </div>
-      </Container>
-    </>
+      </div>
+    </Container>
   );
 };
 
