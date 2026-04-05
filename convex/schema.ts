@@ -53,4 +53,9 @@ export default defineSchema({
     acknowledge: v.boolean(),
     instructions: v.boolean(),
   }),
+  contacts: defineTable({
+    name: v.string(),
+    email: v.string(),
+    message: v.string(),
+  }),
 });
