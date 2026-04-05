@@ -5,6 +5,7 @@ import "./index.css";
 import { ClerkProvider, useAuth } from "@clerk/clerk-react";
 import { ConvexProviderWithClerk } from "convex/react-clerk";
 import { ConvexReactClient } from "convex/react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 console.log("Convex URL:", import.meta.env.VITE_CONVEX_URL);
 
