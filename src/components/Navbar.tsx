@@ -45,7 +45,7 @@ const NavBar = ({showSidebar, setShowSidebar}: NavBarProps) => {
       <SearchBar/>
       <Unauthenticated>
         <SignInButton mode="modal">
-          <Button variant="signin" title="Sign in">Sign In</Button>
+          <Button variant="orange" title="Sign in">Sign In</Button>
         </SignInButton>
       </Unauthenticated>
       <Authenticated>

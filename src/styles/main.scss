@@ -44,7 +44,7 @@ $theme-colors: map-merge($theme-colors, variables.$core-colors);
   flex-direction: column;
 }
 
-.btn-signin {
+.btn-orange {
     @include button-variant (
         #ff4500, 
         #ff4500, 
@@ -106,4 +106,8 @@ $theme-colors: map-merge($theme-colors, variables.$core-colors);
     margin-right: 1rem;
     width: 2rem;
     height: 2rem;
+}
+
+.content-card {
+    
 }
