@@ -58,7 +58,7 @@ const ContactPage = () => {
       <h3>Contact us</h3>
       {errorMsg && (
         <div className="error-msg">
-          <p>{errorMsg}</p>
+          <span>{errorMsg}</span>
         </div>
       )}
 

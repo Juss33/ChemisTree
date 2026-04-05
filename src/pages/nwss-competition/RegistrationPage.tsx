@@ -75,7 +75,7 @@ const RegistrationPage = () => {
 
       {error && (
         <div className="error-msg">
-          <p>{error}</p>
+          <span>{error}</span>
         </div>
       )}
 
