@@ -3,13 +3,19 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+
+  transform: translateX(0);
+  transition: transform 0.3s ease, opacity 0.2s ease;
+  will-change: transform;
 }
+
 .sidebar-closed {
-  margin-left: -250px;
+  transform: translateX(-100%);
+  opacity: 0;
 }
 
 .sidebar-open {
-  margin-left: 0;
+  transform: translateX(0);
 }
 
 .sidebar-link {
@@ -41,13 +47,8 @@
 }
 
 .sidebar-col {
-  transition: width 0.3s ease;
+  width: 220px;
   overflow: hidden;
-}
-
-.sidebar-col.closed {
-  width: 0;
-  padding: 0;
 }
 
 .sidebar-col.open {
@@ -55,5 +56,9 @@
 }
 
 .content-col {
-  transition: all 0.3s ease;
+  transition: margin-left 0.3s ease;
+}
+
+.content-col.shifted {
+  margin-left: 220px;
 }
