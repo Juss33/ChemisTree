@@ -27,6 +27,8 @@ const AboutUsPage = () => {
             </p>
           </div>
         </div>
+
+        <span className="position-absolute bottom-0 end-0 px-1 bg-black bg-opacity-10">ChemisTree version {APP_VERSION}</span>
       </Container>
     </>
   );

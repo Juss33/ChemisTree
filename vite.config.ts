@@ -5,5 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: process.env.VITE_BASE_PATH || "/ChemisTree",
   plugins: [react()],
-
+  define: {
+    APP_VERSION: JSON.stringify(process.env.npm_package_version), 
+  }
 })
