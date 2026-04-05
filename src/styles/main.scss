@@ -11,7 +11,7 @@ $container-max-widths: (
   xl: 960px,
   xxl: 1140px
 );
-$btn-border-radius: 20px;
+$btn-border-radius: 0.375rem;
 $font-family-sans-serif: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 $offcanvas-horizontal-width: 250px;
 $theme-colors: map-merge($theme-colors, $colors); 

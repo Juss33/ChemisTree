@@ -130,7 +130,7 @@ const RegistrationPage = () => {
             feedbackType='invalid'
           />
         </Form.Group>
-        <Button type='submit' id="submitButton">Submit</Button>
+        <Button type='submit' id="submitButton" variant='primary'>Submit</Button>
       </Form>
     </Container>
   );

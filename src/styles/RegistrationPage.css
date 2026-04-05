@@ -1,15 +1,3 @@
-button[type="submit"] {
-  padding: 5px 15px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-button[type="submit"]:hover {
-  background-color: #0056b3;
-}
-
 .error-msg {
   color: var(--bs-form-invalid-color)
 }
