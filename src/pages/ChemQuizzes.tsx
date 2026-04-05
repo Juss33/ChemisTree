@@ -7,7 +7,7 @@ const navigate = useNavigate();
 const goToQuiz = () => {
     navigate("/quiz");
   };
-const ContactPage = () => {
+const ChemQuizzes = () => {
   return (
     <>
       <Container>
@@ -23,4 +23,4 @@ const ContactPage = () => {
   );
 };
 
-export default ContactPage;
+export default ChemQuizzes;

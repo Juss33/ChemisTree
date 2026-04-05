@@ -9,6 +9,7 @@ import PageNotFound from "./pages/PageNotFound";
 import AboutUsPage from "./pages/AboutUsPage";
 import ContactPage from "./pages/ContactPage";
 import ResourcePage from "./pages/ResourcePage";
+import ChemQuizzes from "./pages/ChemQuizzes";
 import UpdatesPage from "./pages/UpdatesPage";
 import './styles/App.scss';
 import InstructionPage from "./pages/nwss-competition/InstructionPage";
@@ -25,6 +26,7 @@ function App() {
         <Route path="post/:postId" element={<PostPage />} />
         <Route path="u/:username" element={<ProfilePage />} />
         <Route path="/resources" element={<ResourcePage />} />
+        <Route path="/quizzes" element={<ChemQuizzes />} />
         <Route path="/updates" element={<UpdatesPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/about-us" element={<AboutUsPage />} />
