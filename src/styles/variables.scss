@@ -1,0 +1,36 @@
+$orange:             rgb(255, 69, 0); 
+$ctmint:             rgb(204, 255, 140); 
+$ctseafoam:          rgb(129, 222, 118); 
+$ctgrayblue:         rgb(61, 88, 125); 
+$ctlapisblue:        rgb(58, 85, 180);
+$ctcornflowerblue:   rgb(108, 173, 223); 
+$ctskyblue:          rgb(140, 217, 255); 
+
+$ctbgw1:             rgb(218, 224, 230); 
+$ctbgw1-rgb:         218, 224, 230; 
+$ctbgw2:             rgb(175, 179, 184); 
+$ctbgw2-rgb:         175, 179, 184; 
+$ctbgw3:             rgb(151, 157, 163); 
+$ctbgw3-rgb:         151, 157, 163; 
+$ctbgb1:             rgb(31, 29, 29); 
+$ctbgb1-rgb:         31, 29, 29; 
+$ctbgb2:             rgb(46, 45, 45); 
+$ctbgb2-rgb:         46, 45, 45;  
+$ctbgb3:             rgb(66, 64, 64); 
+$ctbgb3-rgb:         66, 64, 64; 
+
+$new-colors: (
+    "ctorange": $orange,
+    "sidebar": rgb(248,249,250),
+    "ctmint": $ctmint,
+    "ctseafoam": $ctseafoam, 
+    "ctlapisblue": $ctlapisblue,
+    "ctcornflowerblue": $ctcornflowerblue,
+    "ctskyblue": $ctskyblue
+);
+
+$core-colors: (
+  "ctbg1": $ctbgw1, 
+  "ctbg2": $ctbgw2, 
+  "ctbg3": $ctbgw3, 
+);

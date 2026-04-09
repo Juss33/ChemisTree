@@ -1,14 +1,13 @@
 import { Container } from "react-bootstrap";
-import { Feed } from "../components/feed";
 
-const HomePage = () => {
+const UpdatesPage = () => {
   return (
     <>
       <Container>
-        <Feed />
+        testing this page, put updates here
       </Container>
     </>
   );
 };
 
-export default HomePage;
+export default UpdatesPage;

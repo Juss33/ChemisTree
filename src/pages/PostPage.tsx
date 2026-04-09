@@ -17,8 +17,7 @@ const PostPage = () => {
     </div>
   }
 
-  return <div className="post-page">
-    <div className="container">
+  return <div className="container">
       <div className="page-header">
         <div onClick={() => navigate(-1)} className="back-link" style={{cursor: "pointer"}}>
           <FaArrowLeft /> Back
@@ -26,7 +25,6 @@ const PostPage = () => {
       </div>
       <PostCard post={post} showSubreddit={true} expandedView={true} />
     </div>
-  </div>
 }
 
 export default PostPage;

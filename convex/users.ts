@@ -16,6 +16,8 @@ export const upsertFromClerk = internalMutation({
     const userAttributes = {
       username: data.username || "",
       externalId: data.id,
+      userPfpUrl: data.has_image ? data.image_url : undefined,
+      userRole: "USER" as const, // default role
     };
 
     const user = await userByExternalId(ctx, data.id);
@@ -69,9 +71,22 @@ export const getPublicUser = query({
     const user = await ctx.db.query("users")
     .withIndex("byUsername", (q) => q.eq("username", args.username))
     .unique();
-    if (!user) return {posts: 0};
+    if (!user) {
+      return { 
+        isError: true, 
+        errorMessage: "User not found"
+      }; 
+    };
 
     const postCount = await counts.count(ctx, postCountKey(user._id));
-    return { posts: postCount }
+    return {
+      isError: false,
+      userData: {
+        username: user.username,
+        userBio: user.userBio,
+        userPfpUrl: user.userPfpUrl,
+      }, 
+      postCount: postCount, 
+    }; 
   },
 })

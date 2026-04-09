@@ -2,43 +2,81 @@ import { useParams } from "react-router-dom";
 import { useQuery } from "convex/react";
 import { api } from "../../convex/_generated/api";
 import PostCard from "../components/PostCard";
-import "../styles/SubmitPage.css";
+import "../styles/ProfilePage.scss"
+import { Container, Image } from "react-bootstrap";
 
 const ProfilePage = () => {
   const { username } = useParams();
   const posts = useQuery(api.post.userPosts, {
     authorUsername: username || "",
   });
-
   const stats = useQuery(api.users.getPublicUser, {username: username || ""})
-  if (posts === undefined)
+  if (stats === undefined) {
     return (
-      <div className="content-container">
-        <div className="profile-header">
-          <h1>u/{username}</h1>
-        </div>
-        <div className="loading">Loading posts...</div>
+      <Container>
+      <div className="profile-header">
+        <Image
+          src="/default-profile-pic.png" // TODO
+          alt="Profile"
+          roundedCircle
+          className="profile-pic-5"
+        />
+        <h2 className="mb-0">u/{username}</h2>
       </div>
+      <div className="profile-container">
+        <p>Loading profile...</p>
+      </div>
+    </Container>
     );
+  }
+  if (stats?.isError) {
+    return (
+      <Container>
+        <p>User not found!</p>
+      </Container>
+    ); 
+  }; 
+
+  console.log(stats);
 
   return (
-    <div className="content-container">
+    <Container>
       <div className="profile-header">
-        <h1>u/{username}</h1>
-        <p style={{ color: "#7c7c7c" }}>Posts: {stats?.posts ?? 0}</p>
+        <Image
+          src={stats?.userData?.userPfpUrl || "/default-profile-pic.png"} // TODO
+          alt="Profile"
+          roundedCircle
+          className="profile-pic-5"
+        />
+        <h2 className="mb-0">u/{username}</h2>
       </div>
-      <div className="posts-container">
-        {posts.length === 0 ? (
-          <div className="no-posts">
-            <p>No posts yet</p>
-          </div>
-        ) : (
-          posts.map((post) => (
-            <PostCard key={post._id} post={post} showSubreddit={true} />
-          ))
-        )}
+      <div className="profile-container">
+        {stats?.userData?.userBio ? (
+          <>
+            <h5>User bio</h5>
+            <p>
+              {stats?.userData?.userBio || ""}
+            </p>
+          </>
+        ) : (<></>) 
+        }
+        <h5>Posts</h5>
+        <p>Count: {stats?.postCount ?? 0}</p>
+        {
+          posts === undefined ? (
+            <div className="profile-container">Loading posts...</div>
+          ) : posts.length === 0 ? (
+            <div className="profile-container">
+              <p>No posts yet</p>
+            </div>
+          ) : (
+            posts.map((post) => (
+              <PostCard key={post._id} post={post} showSubreddit={true} />
+            ))
+          )
+        }
       </div>
-    </div>
+    </Container>
   );
 };
 
