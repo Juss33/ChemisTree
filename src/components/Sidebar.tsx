@@ -41,10 +41,10 @@ export default function SideBar() {
       <NavLink to="/" className="sidebar-link">Home</NavLink>
       <NavLink to="/about-us" className="sidebar-link">About Us</NavLink>
       <NavLink to="/resources" className="sidebar-link">Resources</NavLink>
-      <NavLink to="/quizzes" className="sidebar-link">Quizzes</NavLink>
       <NavLink to="/updates" className="sidebar-link">Updates</NavLink>
       <NavLink to="/contact" className="sidebar-link">Contact</NavLink>
       <NavLink to="/nwss-competition" className="sidebar-link">NWSS OChem Nomenclature Competition</NavLink>
     </nav>
   );
 }
+//<NavLink to="/quizzes" className="sidebar-link">Quizzes</NavLink>
