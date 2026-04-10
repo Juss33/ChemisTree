@@ -18,7 +18,7 @@ const NavBar = ({showSidebar, setShowSidebar}: NavBarProps) => {
   const {user} = useUser();
   const navigate = useNavigate();
 
-  return <Navbar className="bg-body-tertiary py-0" key="md" expand="md">
+  return <Navbar className="bg-body-tertiary py-0 position-sticky top-0" key="md" expand="md">
     <div className="navbar-container">
       <Button variant="light" onClick={() => setShowSidebar(!showSidebar)} className="d-block" title="Open sidebar"><FaBars /></Button>
       <Offcanvas 

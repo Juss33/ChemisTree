@@ -69,6 +69,7 @@ $theme-colors: map-merge($theme-colors, variables.$core-colors);
     margin-left: auto;
     width: 100%; 
     padding: 0 2vw;
+    height: variables.$navbar-height;
 }
 
 @include media-breakpoint-up(md) {
@@ -85,6 +86,12 @@ $theme-colors: map-merge($theme-colors, variables.$core-colors);
     .navbar-container {
         margin: 0 15vw;  
     }
+}
+
+.sidebarcol {
+    position: sticky; 
+    top: variables.$navbar-height;
+    max-height: calc(100vh - variables.$navbar-height);
 }
 
 .profile-pic-5 {
