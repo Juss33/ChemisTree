@@ -37,8 +37,7 @@ const CreateCommunityModal = ({isOpen, onClose}: CreateCommunityModalProps) => {
         }
 
         setIsLoading(true);
-        await createSubreddit({name, description}).then((result) => {
-            console.log(result);
+        await createSubreddit({name, description}).then((_result) => {
             onClose();
         }).catch((err) => {
             setError(`Failed to create community. ${err.data.message}`);
