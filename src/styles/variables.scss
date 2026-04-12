@@ -6,13 +6,13 @@ $ctlapisblue:        rgb(58, 85, 180);
 $ctcornflowerblue:   rgb(108, 173, 223); 
 $ctskyblue:          rgb(140, 217, 255); 
 
-$ctbgw1:             rgb(218, 224, 230); 
+$ctbgw1:             rgb(218, 224, 230);  // background
 $ctbgw1-rgb:         218, 224, 230; 
-$ctbgw2:             rgb(175, 179, 184); 
-$ctbgw2-rgb:         175, 179, 184; 
-$ctbgw3:             rgb(151, 157, 163); 
-$ctbgw3-rgb:         151, 157, 163; 
-$ctbgb1:             rgb(31, 29, 29); 
+$ctbgw2:             rgb(238, 240, 243);  // background variant (e.g., for cards, modals)
+$ctbgw2-rgb:         238, 240, 243; 
+$ctbgw3:             rgb(175, 179, 184);  // borders, misc
+$ctbgw3-rgb:         175, 179, 184; 
+$ctbgb1:             rgb(31, 29, 29);     // same thing but dark variant
 $ctbgb1-rgb:         31, 29, 29; 
 $ctbgb2:             rgb(46, 45, 45); 
 $ctbgb2-rgb:         46, 45, 45;  
