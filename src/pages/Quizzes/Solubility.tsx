@@ -1,7 +1,5 @@
-import { Container } from "react-bootstrap";
+// import { Container } from "react-bootstrap";
 
-const Solubility = () => {
-    return (
-        
-    )
-}
+// const Solubility = () => {
+//     return <></>
+// }
