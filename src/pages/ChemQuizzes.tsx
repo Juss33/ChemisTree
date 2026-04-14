@@ -11,6 +11,7 @@ const ChemQuizzes = () => {
 
   return (
     <Container>
+      <div className="page-header"><h1>Quizzes</h1></div>
       <div className="content-grid">
         <div className="feed-container">
           <h2 className="section-title">Solubility</h2>
