@@ -13,10 +13,12 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
-  background: white;
+  /* background: white; */
+  background-color: var(--bs-ctbg2);
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   padding: 20px;
+  overflow-wrap: anywhere;
 }
 
 .section-title {

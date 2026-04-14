@@ -19,9 +19,14 @@ $ctbgb2-rgb:         46, 45, 45;
 $ctbgb3:             rgb(66, 64, 64); 
 $ctbgb3-rgb:         66, 64, 64; 
 
+$sidebarw: rgb(248,249,250);
+$sidebarw-rgb: 248,249,250;
+$sidebarb: rgb(44, 46, 48);
+$sidebarb-rgb: 44, 46, 48;
+
 $new-colors: (
     "ctorange": $orange,
-    "sidebar": rgb(248,249,250),
+    "sidebar": $sidebarw,
     "ctmint": $ctmint,
     "ctseafoam": $ctseafoam, 
     "ctlapisblue": $ctlapisblue,
@@ -34,5 +39,16 @@ $core-colors: (
   "ctbg2": $ctbgw2, 
   "ctbg3": $ctbgw3, 
 );
+
+$dark-theme-colors: (
+  "ctbg1": $ctbgb1,
+  "ctbg1-rgb": $ctbgb1-rgb,
+  "ctbg2": $ctbgb2,
+  "ctbg2-rgb": $ctbgb2-rgb,
+  "ctbg3": $ctbgb3,
+  "ctbg3-rgb": $ctbgb3-rgb,
+  "sidebar": $sidebarb,
+  "sidebar-rgb": $sidebarb-rgb,
+); 
 
 $navbar-height: 50px; 
