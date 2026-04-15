@@ -71,13 +71,14 @@ const RegistrationPage = () => {
   return (
     <Container>
       <h3>2026 NWSS Organic Nomenclature Competition Registration</h3>
-      <p>Fill information below to participate at the competition.</p>
-
-      {error && (
-        <div className="error-msg">
-          <span>{error}</span>
-        </div>
-      )}
+      <p>
+        Fill information below to participate at the competition.
+        {error && (
+          <div className="error-msg">
+            <span>{error}</span>
+          </div>
+        )}
+      </p>
 
       <Form onSubmit={handleSubmit} validated={validated} noValidate className='pt-0'>
         <Form.Group className="mb-3">
@@ -101,7 +102,7 @@ const RegistrationPage = () => {
         <Form.Group as={Col} md="6" className="mb-3">
           <Form.Label>Number of Students Parcitipating</Form.Label>
           <Form.Control required type='number' id='nstudents' name='nstudents' value={formData.nstudents} onChange={handleChange} min="1" />
-          <Form.Control.Feedback type='invalid'>Number of students participating must be greater than 1. </Form.Control.Feedback>
+          <Form.Control.Feedback type='invalid'>Number of students participating must be greater than or equal to 1. </Form.Control.Feedback>
           <Form.Control.Feedback type='valid'>Looks good!</Form.Control.Feedback>
         </Form.Group>
         <Form.Group className="mb-3">

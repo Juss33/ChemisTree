@@ -1,5 +1,10 @@
-// import { Container } from "react-bootstrap";
+//import Quiz from "../../components/Quiz";
 
-// const Solubility = () => {
-//     return <></>
-// }
+//export default function QuizPage() {
+//    return (
+//        <div>
+//            <h1>Quiz</h1>
+//            <Quiz/>
+//        </div>
+//    )
+//}

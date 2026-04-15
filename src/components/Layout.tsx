@@ -12,7 +12,7 @@ function Layout() {
       <NavBar showSidebar={showSidebar} setShowSidebar={setShowSidebar}/>
       <Row className="g-0 flex-grow-1">
         {showSidebar && (
-          <Col xs={3} xxl={2} className="text-bg-sidebar d-none d-md-block">
+          <Col xs={3} xxl={2} className="text-bg-sidebar d-none d-md-block sidebarcol">
             <SideBar />
           </Col>
         )}
