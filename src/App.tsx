@@ -10,6 +10,7 @@ import AboutUsPage from "./pages/AboutUsPage";
 import ContactPage from "./pages/ContactPage";
 import ResourcePage from "./pages/ResourcePage";
 import ChemQuizzes from "./pages/ChemQuizzes";
+import QuizPage from "./pages/QuizPage";
 import UpdatesPage from "./pages/UpdatesPage";
 import './styles/App.scss';
 import InstructionPage from "./pages/nwss-competition/InstructionPage";
@@ -27,6 +28,7 @@ function App() {
         <Route path="u/:username" element={<ProfilePage />} />
         <Route path="/resources" element={<ResourcePage />} />
         <Route path="/quizzes" element={<ChemQuizzes />} />
+        <Route path="/quiz/:id" element={<QuizPage />} />
         <Route path="/updates" element={<UpdatesPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/about-us" element={<AboutUsPage />} />
