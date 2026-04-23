@@ -5,7 +5,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://clerk.chemistreefoundation.org https://*.clerk.accounts.dev https://static.cloudflareinsights.com; connect-src 'self' https://clerk.chemistreefoundation.org https://*.clerk.accounts.dev https://*.convex.cloud wss://*.convex.cloud; frame-src https://clerk.chemistreefoundation.org https://*.clerk.accounts.dev; img-src 'self' data: https://img.clerk.com https://clerk.chemistreefoundation.org https://*.clerk.accounts.dev; style-src 'self' 'unsafe-inline'; worker-src 'self' blob:;"
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://vercel.live https://clerk.chemistreefoundation.org https://*.clerk.accounts.dev https://static.cloudflareinsights.com; connect-src 'self' https://vercel.live https://clerk.chemistreefoundation.org https://*.clerk.accounts.dev https://*.convex.cloud wss://*.convex.cloud; frame-src https://clerk.chemistreefoundation.org https://*.clerk.accounts.dev; img-src 'self' data: https://img.clerk.com https://images.clerk.dev https://clerk.chemistreefoundation.org https://*.clerk.accounts.dev; style-src 'self' 'unsafe-inline'; worker-src 'self' blob:;"
         }
       ]
     }
