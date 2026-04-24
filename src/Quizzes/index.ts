@@ -1,7 +1,7 @@
-import acidbaseQuiz from "./acidbase";
+import acidbase from "./acidbase";
 
 const quizzes = {
-    acidbaseQuiz,
+    acidbase,
 }
 
 export default quizzes
