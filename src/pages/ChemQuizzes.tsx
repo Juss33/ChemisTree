@@ -1,11 +1,27 @@
+import { Container } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import { Button } from "react-bootstrap";
 
-export default function QuizSelect() {
+const ChemQuizzes = () => {
   const navigate = useNavigate();
 
-  return (<div>
-    <h1>Select a Quiiz</h1>
+  const goToQuiz = () => {
+    navigate("/quiz");
+  };
 
-    <button onClick={() => navigate("/quiz/acidbase")}>Acidbase</button>
-  </div>)
-}
+  return (
+    <Container>
+      <div className="page-header"><h1>Quizzes</h1></div>
+      <div className="content-grid">
+        <div className="feed-container">
+          <h2 className="section-title">Solubility</h2>
+          <Button variant="light" onClick={goToQuiz} title="Create">
+            Start Quiz
+          </Button>
+        </div>
+      </div>
+    </Container>
+  );
+};
+
+export default ChemQuizzes;
