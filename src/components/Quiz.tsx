@@ -39,7 +39,7 @@ export default function Quiz({ quiz }: { quiz: QuizType }) {
     const q = quiz.questions[current];
 
     return (
-        <div>
+        <div className="container">
             <h2>{quiz.title}</h2>
             <p>
                 Question {current + 1} / {quiz.questions.length}
