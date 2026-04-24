@@ -6,7 +6,7 @@ import { FaImage } from "react-icons/fa";
 import {IoMdClose} from "react-icons/io";
 import "../styles/SubmitPage.css";
 
-const SubmmitPage = () => {
+const SubmitPage = () => {
   const {subredditName} = useParams();
   const navigate = useNavigate();
   const subreddit = useQuery(api.subreddit.get, {name: subredditName || ""});
@@ -167,4 +167,4 @@ const SubmmitPage = () => {
   );
 }
 
-export default SubmmitPage;
+export default SubmitPage;

@@ -1,0 +1,15 @@
+.apply-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #0a66c2;
+  color: white;
+  text-decoration: none;
+  border-radius: 24px;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.apply-button:hover {
+  background-color: #084fa0;
+  color: white; 
+}

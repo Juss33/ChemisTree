@@ -37,8 +37,6 @@ const ProfilePage = () => {
     ); 
   }; 
 
-  console.log(stats);
-
   return (
     <Container>
       <div className="profile-header">

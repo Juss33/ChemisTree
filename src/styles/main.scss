@@ -11,7 +11,7 @@ $container-max-widths: (
   xl: 960px,
   xxl: 1140px
 );
-$btn-border-radius: 20px;
+$btn-border-radius: 0.375rem;
 $font-family-sans-serif: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 $offcanvas-horizontal-width: 250px;
 $theme-colors: map-merge($theme-colors, $colors); 
@@ -24,12 +24,9 @@ $theme-colors: map-merge($theme-colors, variables.$core-colors);
 
 // display modes
 @include color-mode(dark) {
-  --bs-ctbg1:     #{variables.$ctbgb1}; 
-  --bs-ctbg1-rgb: #{variables.$ctbgb1-rgb};
-  --bs-ctbg2:     #{variables.$ctbgb2}; 
-  --bs-ctbg2-rgb: #{variables.$ctbgb2-rgb};
-  --bs-ctbg3:     #{variables.$ctbgb3}; 
-  --bs-ctbg3-rgb: #{variables.$ctbgb3-rgb};
+    @each $name, $color in variables.$dark-theme-colors {
+        --bs-#{$name}: #{$color};
+    }
 }
 
 @import "bootstrap/scss/bootstrap";
@@ -44,7 +41,7 @@ $theme-colors: map-merge($theme-colors, variables.$core-colors);
   flex-direction: column;
 }
 
-.btn-signin {
+.btn-orange {
     @include button-variant (
         #ff4500, 
         #ff4500, 
@@ -69,6 +66,7 @@ $theme-colors: map-merge($theme-colors, variables.$core-colors);
     margin-left: auto;
     width: 100%; 
     padding: 0 2vw;
+    height: variables.$navbar-height;
 }
 
 @include media-breakpoint-up(md) {
@@ -85,6 +83,12 @@ $theme-colors: map-merge($theme-colors, variables.$core-colors);
     .navbar-container {
         margin: 0 15vw;  
     }
+}
+
+.sidebarcol {
+    position: sticky; 
+    top: variables.$navbar-height;
+    max-height: calc(100vh - variables.$navbar-height);
 }
 
 .profile-pic-5 {
@@ -107,3 +111,16 @@ $theme-colors: map-merge($theme-colors, variables.$core-colors);
     width: 2rem;
     height: 2rem;
 }
+
+.content-card {
+    
+}
+
+
+[id] {
+    scroll-margin-top: calc(variables.$navbar-height + 3vh)
+}
+
+
+// somehow smooth scrolling isn't working
+html { scroll-behavior: smooth; } 

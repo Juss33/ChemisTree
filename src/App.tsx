@@ -9,10 +9,15 @@ import PageNotFound from "./pages/PageNotFound";
 import AboutUsPage from "./pages/AboutUsPage";
 import ContactPage from "./pages/ContactPage";
 import ResourcePage from "./pages/ResourcePage";
+import ChemQuizzes from "./pages/ChemQuizzes";
+import QuizPage from "./pages/QuizPage";
 import UpdatesPage from "./pages/UpdatesPage";
 import './styles/App.scss';
 import PostCreatePage from "./pages/PostCreatePage";
 import PostViewPage from "./pages/PostViewPage";
+import InstructionPage from "./pages/nwss-competition/InstructionPage";
+import RegistrationPage from "./pages/nwss-competition/RegistrationPage";
+import SuccessPage from "./pages/nwss-competition/SuccessPage";
 
 function App() {
   return <BrowserRouter>
@@ -24,11 +29,19 @@ function App() {
         <Route path="post/:postId" element={<PostPage />} />
         <Route path="u/:username" element={<ProfilePage />} />
         <Route path="/resources" element={<ResourcePage />} />
+        <Route path="/quizzes" element={<ChemQuizzes />} />
+        <Route path="/quiz/:id" element={<QuizPage />} />
         <Route path="/updates" element={<UpdatesPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/about-us" element={<AboutUsPage />} />
         <Route path="/test2" element={<PostCreatePage />} />
         <Route path="/test3/:postId" element={<PostViewPage />} />
+
+        <Route path="/nwss-competition" > 
+          <Route index element={<InstructionPage />} />
+          <Route path="registration" element={<RegistrationPage />} />
+          <Route path="success" element={<SuccessPage />} />
+        </Route>
         {/* 404 page */}
         <Route path="*" element={<PageNotFound />} />
       </Route>
