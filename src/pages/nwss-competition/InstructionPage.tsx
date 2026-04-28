@@ -35,7 +35,7 @@ const InstructionPage = () => {
           </p>
           <div>
             <h6>Important Dates</h6>
-            <p>Deadline for Registration: Monday, May 24 2026<br></br>Competition Date: Friday, May 29 2026 
+            <p>Deadline for Registration: Sunday, May 24 2026<br></br>Competition Date: Friday, May 29 2026 
             </p>
           </div>
           <div>
