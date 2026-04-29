@@ -9,6 +9,7 @@ import { imageBlockComponent } from "@milkdown/components/image-block";
 import { history } from '@milkdown/kit/plugin/history'
 import { math } from "@milkdown/plugin-math"
 import "../styles/MilkdownEditor.scss"
+import "../styles/katex.min.css"
 
 // input rules
 /**
