@@ -1,4 +1,4 @@
-import { defaultValueCtx, Editor, editorViewOptionsCtx, rootCtx } from "@milkdown/kit/core";
+import { defaultValueCtx, Editor, editorCtx, editorViewOptionsCtx, rootCtx } from "@milkdown/kit/core";
 import { commonmark, linkSchema, } from "@milkdown/kit/preset/commonmark";
 import { InputRule, } from "@milkdown/kit/prose/inputrules";
 import { $inputRule, getMarkdown } from "@milkdown/kit/utils";
@@ -10,6 +10,7 @@ import { history } from '@milkdown/kit/plugin/history'
 import { math } from "@milkdown/plugin-math"
 import "../styles/MilkdownEditor.scss"
 import "../styles/katex.min.css"
+import { tooltip, tooltipView } from "./milkdown/ExampleTooltip";
 
 // input rules
 /**
@@ -58,6 +59,9 @@ export const MilkdownEditor: React.FC<MilkdownEditorOptions> = ({
         .config((ctx) => {
             ctx.set(rootCtx, root);
             ctx.set(defaultValueCtx, defaultMarkdown);
+            ctx.set(tooltip.key, {
+                view: (view) => tooltipView(view, ctx.get(editorCtx)), 
+            })
             ctx.update(editorViewOptionsCtx, (prev) => ({
                 ...prev,
                 editable: () => canEdit,
@@ -72,7 +76,8 @@ export const MilkdownEditor: React.FC<MilkdownEditorOptions> = ({
         .use(AddLinkInputRule)
         .use(history)
         .use(math)
-        ,  
+        .use(tooltip)
+
     );
 
     return <Milkdown />;

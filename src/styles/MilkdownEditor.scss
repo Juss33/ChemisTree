@@ -24,7 +24,15 @@
     h5 {
         font-size: 1.125rem;
     }
+    .tooltip {
+      // shit will be added later
+    }
+    .tooltip[data-show='false'] {
+      display: none;
+    }
 }
+
+
 
 
 // temp include
