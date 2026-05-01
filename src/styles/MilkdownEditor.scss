@@ -27,8 +27,26 @@
     .tooltip {
       // shit will be added later
     }
+    .tooltip[data-show="true"] {
+      opacity: var(--bs-tooltip-opacity);
+    }
     .tooltip[data-show='false'] {
       display: none;
+    }
+    .tooltip .ctrls {
+      box-sizing: border-box;
+      width: 30px;
+      height: 30px;
+      padding: unset;
+      border-width: 0;
+      border-radius: 0;
+      background-color: var(--bs-ctbg3);
+      border-bottom: 4px solid var(--bs-ctyellow);
+      transition: none;
+    }
+    .tooltip .ctrls.active {
+      background-color: var(--bs-ctcornflowerblue);
+      border-bottom: 4px solid var(--bs-ctbg2);
     }
 }
 
