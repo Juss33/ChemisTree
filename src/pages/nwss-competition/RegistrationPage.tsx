@@ -82,7 +82,7 @@ const RegistrationPage = () => {
 
       <Form onSubmit={handleSubmit} validated={validated} noValidate className='pt-0'>
         <Form.Group className="mb-3">
-          <Form.Label>School District</Form.Label>
+          <Form.Label>School</Form.Label>
           <Form.Control required type='text' id='schoolDistrict' name='schoolDistrict' value={formData.schoolDistrict} onChange={handleChange} />
         </Form.Group>
         <Form.Group className="mb-3">
@@ -122,7 +122,7 @@ const RegistrationPage = () => {
         <Form.Group className='mb-3'>
           <Form.Check
             required
-            label="By registering to participate, I agree to invigilate the contests per the instructions provided. (i.e., printing out and distributing the contest, supervising the students participating in the contest, including answering questions in the online survey, and adhering to the time limit = 40 minutes)"
+            label="By registering to participate, I agree to invigilate the contests per the instructions provided. (i.e., printing out and distributing the contest, supervising the students participating in the contest, scanning student answer booklet, and adhering to the time limit = 40 minutes)"
             id="instructions"
             name="instructions"
             checked={formData.instructions}
