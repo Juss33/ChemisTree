@@ -88,13 +88,22 @@ import { Container } from "react-bootstrap";
 const AboutUsPage = () => {
   return (
       <Container>
-        <form action="https://formsubmit.co/chemistree.ca@gmail.com" method="POST">
-          <input type="text" name="name" required className="mb-3" placeholder="name"></input>
-          <input type="email" name="email" required className="mb-3" placeholder="email"></input>
-          <input type="text" name="subject" required className="mb-3" placeholder="subject"></input>
-          <textarea name="message" required className="mb-3" placeholder="message"></textarea>
-          <button type="submit">Send</button>
-        </form>
+        <div className="content-grid">
+          <div className="feed-container">
+            <h2 className="section-title">Contact Us</h2>
+              <form action="https://formsubmit.co/chemistree.ca@gmail.com" method="POST">
+                <p>Name:</p>
+                <input type="text" name="name" required className="mb-3" placeholder="your full name"></input>
+                <p>Email:</p>
+                <input type="email" name="email" required className="mb-3" placeholder="your email"></input>
+                <p>Subject:</p>
+                <input type="text" name="subject" required className="mb-3" placeholder="subject of email"></input>
+                <p>Message:</p>
+                <textarea name="message" required className="mb-3" placeholder="your message here"></textarea>
+                <button type="submit">Send</button>
+              </form>
+            </div>
+        </div>
       </Container>
   );
 };
